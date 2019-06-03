@@ -1,0 +1,437 @@
+toilet_type,inadequate_toilet
+NA,NA
+11,FALSE
+12,FALSE
+13,FALSE
+14,FALSE
+15,FALSE
+21,FALSE
+22,FALSE
+23,FALSE
+24,FALSE
+25,FALSE
+26,FALSE
+30,FALSE
+31,FALSE
+32,FALSE
+33,FALSE
+34,FALSE
+35,FALSE
+36,FALSE
+41,TRUE
+42,TRUE
+43,TRUE
+44,TRUE
+45,TRUE
+51,FALSE
+61,FALSE
+71,FALSE
+96,FALSE
+99,FALSE
+(vip) latrine/blair toilet,FALSE
+....flush -  to septic tank,FALSE
+....flush - don't know,FALSE
+....flush - to piped sewer system,FALSE
+....flush - to pit latrine,FALSE
+....not facility,TRUE
+....pit latrine - ventilated improved,FALSE
+....pit latrine - with slab,FALSE
+....pit latrine - without slab,TRUE
+..modern flush toilet,FALSE
+..Modern flush toilet,FALSE
+..no facility,TRUE
+..No facility,TRUE
+..pit toilet\latrine,FALSE
+..Pit toilet\latrine,FALSE
+..traditional with bucket flush,FALSE
+..Traditional with bucket flush,FALSE
+..traditional with tank flush,FALSE
+..Traditional with tank flush,FALSE
+basic pit,TRUE
+beach/sea,TRUE
+blair toilet,FALSE
+borehole,TRUE
+bucket,TRUE
+bucket latrine,TRUE
+bucket toilet,TRUE
+Bucket toilet,TRUE
+"bucket, pan",TRUE
+bucket/pan,TRUE
+bucket/pan toilet,TRUE
+bucket/potty/other container,TRUE
+bush,TRUE
+bush / field,TRUE
+bush/field,TRUE
+bush/forest,TRUE
+bush/forest/yard/field/no facility,TRUE
+camara s‚ptica,FALSE
+cemented with sink,FALSE
+close pit,FALSE
+Closed pit latrine,FALSE
+collec. flush toilet,FALSE
+composting toilet,FALSE
+Composting toilet,FALSE
+composting toilet/arbo loo,FALSE
+Composting toilet/ecosan,FALSE
+connected to septic well,FALSE
+covered latrine,FALSE
+covered pit latrine - with slab,FALSE
+covered pit latrine - without slab / open pit,FALSE
+covered pit latrine no slab,FALSE
+covered pit latrine with slab,FALSE
+"covered pit latrine, no slab",FALSE
+"covered pit latrine, with slab",FALSE
+drop/hanging toilet,TRUE
+drop/overhang,TRUE
+Drop/overhang,TRUE
+drop/overhang type,TRUE
+ecosan,FALSE
+field,TRUE
+flush,FALSE
+flush - don't know where,FALSE
+flush - to piped sewer system,FALSE
+Flush - to piped sewer system,FALSE
+flush - to pit latrine,FALSE
+Flush - to pit latrine,FALSE
+flush - to septic tank,FALSE
+Flush - to septic tank,FALSE
+flush - to somewhere else,FALSE
+Flush - to somewhere else,FALSE
+flush connected to sewer/with septic tank,FALSE
+flush don't know where,FALSE
+flush or pour flush toilet,FALSE
+flush other,FALSE
+flush to elsewhere,FALSE
+flush to latrine,FALSE
+flush to pipe connected to ground water,FALSE
+flush to piped sewer,FALSE
+flush to piped sewer system,FALSE
+Flush to piped sewer system,FALSE
+flush to piper sewer,FALSE
+flush to pit latrine,FALSE
+Flush to pit latrine,FALSE
+flush to septic tank,FALSE
+Flush to septic tank,FALSE
+flush to sewer system,FALSE
+flush to somewhere else,FALSE
+Flush to somewhere else,FALSE
+flush to vault (bayara),FALSE
+flush toilet,FALSE
+flush toilet (private or shared unknown),FALSE
+flush toilet connected to a septic tank,FALSE
+Flush toilet connected to a septic tank,FALSE
+flush toilet connected to sewer system,FALSE
+Flush toilet connected to sewer system,FALSE
+flush toilet does not know connection,FALSE
+Flush toilet does not know connection,FALSE
+flush toilet not connected to sewer system,FALSE
+flush toilet private,FALSE
+flush toilet shared,FALSE
+flush toilet to piped sewer system,FALSE
+flush toilet to pit latrine,FALSE
+flush toilet to septic tank,FALSE
+flush toilet to somewhere else,FALSE
+flush toilet with connection to open water,FALSE
+Flush toilet with connection to open water,FALSE
+flush toilet with drainage,FALSE
+"flush toilet,private",FALSE
+"flush toilet,shared",FALSE
+flush toilet: own,FALSE
+flush toilet: shared,FALSE
+flush toilet_(11),FALSE
+flush toilet_(13),FALSE
+flush unconnected to sewer/without septic tank,FALSE
+flush with septic ta,FALSE
+"flush, don't know where",FALSE
+"Flush, don't know where",FALSE
+flushed to piped sewer system,FALSE
+flust to pipe connected to canal,FALSE
+gutter/drain,TRUE
+hanging latrine,TRUE
+hanging toilet,TRUE
+hanging toilet / hanging latrine,TRUE
+hanging toilet/ hanging letrine,TRUE
+hanging toilet/latrine,TRUE
+Hanging toilet/latrine,TRUE
+improved (ventilated) pit latrine,FALSE
+improved latrines,FALSE
+improved pit latrine,FALSE
+improved pit toilet latrine,FALSE
+in residence public,FALSE
+in residence/private,FALSE
+indoors: flush to open pit (ditch or river),FALSE
+indoors: flush to piped public system,FALSE
+indoors: flush to septic tank,FALSE
+indoors: latrine to piped public system,FALSE
+indoors: latrine to septic tank,FALSE
+Inside dwelling,FALSE
+inside dwelling,FALSE
+inside yard: flush to open pit (ditch or river),FALSE
+inside yard: flush to piped public system,FALSE
+inside yard: flush to septic tank,FALSE
+inside yard: latrine to open pit (ditch or river),FALSE
+inside yard: latrine to piped public system,FALSE
+inside yard: latrine to septic tank,FALSE
+latrine,FALSE
+Latrine (ciego o negro),FALSE
+latrine (ciego o negro),FALSE
+latrine connected to sewer/with septic tank,FALSE
+Latrine over river/lake,TRUE
+latrine over river/lake,TRUE
+latrine with composting facility,FALSE
+Latrine with composting facility,FALSE
+latrine with connection to open water,FALSE
+Latrine with connection to open water,FALSE
+Latrine with manual flush,FALSE
+latrine with manual flush,FALSE
+latrine with siphon,FALSE
+Latrine with siphon,FALSE
+"latrine, community",FALSE
+"latrine, private",FALSE
+latrine/sewer commun,FALSE
+latrine/sewer privat,FALSE
+latrines,FALSE
+mobile chemical toilet,FALSE
+modern flush,FALSE
+modern flush toilet,FALSE
+modern flush toilets,FALSE
+no fac./bush/field,TRUE
+no facilities,TRUE
+"no facilities, bush",TRUE
+no facilities_(31),TRUE
+no facility,TRUE
+No facility,TRUE
+no facility / bush / field,TRUE
+NO FACILITY / FIELD,TRUE
+"no facility, bush",TRUE
+"no facility, bush, field",TRUE
+"no facility, nature",TRUE
+"no facility,bush",TRUE
+no facility/ bush/ field,TRUE
+no facility/ bush/ field/ river,TRUE
+no facility/bush,TRUE
+"no facility/bush, field",TRUE
+no facility/bush/field,TRUE
+No facility/bush/field,TRUE
+no facility/bush/fld,TRUE
+no facility/field,TRUE
+no facility/outdoors/bush,TRUE
+no facility_(31),TRUE
+no facility_(33),TRUE
+no flush toilet,TRUE
+No service,TRUE
+no service,TRUE
+no toilet facility,TRUE
+"no toilet, in nature",TRUE
+no toilet/bush,TRUE
+no toilet/field/bush,TRUE
+no toilet/field/forest,TRUE
+non-ventilated pit latrine,FALSE
+non-vip pit latrine with slab,FALSE
+non-vip pit latrine without slab,TRUE
+open air,TRUE
+open latrine,TRUE
+open pit,TRUE
+Open pit latrine,TRUE
+open privy,TRUE
+"open, rudimentary",TRUE
+ordinary pit latrine,FALSE
+OTHER,FALSE
+Other,FALSE
+other,TRUE
+other place,FALSE
+other_(41),FALSE
+other_(96),FALSE
+out of yard: flush to open pit (ditch or river),FALSE
+out of yard: flush to piped public system,FALSE
+out of yard: flush to septic tank,FALSE
+out of yard: latrine to open pit (ditch or river),FALSE
+out of yard: latrine to piped public system,FALSE
+out of yard: latrine to septic tank,FALSE
+outro,FALSE
+Outside dwelling,FALSE
+outside dwelling,FALSE
+outside private,FALSE
+outside public,TRUE
+own flush toilet,FALSE
+Own flush toilet,FALSE
+own flush toilet outsite/yard,FALSE
+own flust toilet into residence,FALSE
+own pit toilet/latrine,FALSE
+own trad. pit toilet,FALSE
+own traditional pit toilet,FALSE
+own vent. imp. lat.,FALSE
+pan,TRUE
+personal toilet,FALSE
+piped sewage system,FALSE
+pit,FALSE
+pit latrine,FALSE
+Pit latrine,FALSE
+pit latrine - ventilated improved pit (vip),FALSE
+Pit latrine - ventilated improved pit (VIP),FALSE
+pit latrine - with slab,FALSE
+Pit latrine - with slab,FALSE
+pit latrine - without slab / open pit,TRUE
+Pit latrine - without slab / open pit,TRUE
+pit latrine (traditional),TRUE
+pit latrine ventilated improved pit latrine,FALSE
+pit latrine with drainage,FALSE
+pit latrine with non-washable slab*,FALSE
+Pit latrine with non-washable slab*,FALSE
+pit latrine with slab,FALSE
+Pit latrine with slab,FALSE
+Pit latrine with slab (not washable),FALSE
+Pit latrine with slab (washable),FALSE
+pit latrine with slab no washable,FALSE
+pit latrine with slab that can not be washed,FALSE
+pit latrine with washable slab,FALSE
+pit latrine with washable slab*,FALSE
+Pit latrine with washable slab*,FALSE
+pit latrine without slab,TRUE
+pit latrine without slab / open pit,TRUE
+pit latrine without slab non-wahable,TRUE
+pit latrine without slab/,TRUE
+pit latrine without slab/ open pit,TRUE
+pit latrine without slab/open pit,TRUE
+Pit latrine without slab/open pit,TRUE
+pit latrine without slab/open pit*,TRUE
+Pit latrine without slab/open pit*,TRUE
+"pit latrine, ventilated improved",FALSE
+"pit latrine, with slab",FALSE
+"pit latrine, without slab/open pit",TRUE
+pit toilet,FALSE
+pit toilet latrine,FALSE
+pit toilet latrine (private or shared unknown),FALSE
+pit toilet with basinet (private),FALSE
+pit toilet with bassinet (shared),FALSE
+pit toilet without bassinet (private),FALSE
+pit toilet without bassinet (shared),FALSE
+pit toilet/latrine,FALSE
+pit/latrine,FALSE
+pond/lake,TRUE
+pour flush latrine,FALSE
+"priv latrine, box",FALSE
+"priv latrine, wo/box",FALSE
+private - with septic tank,FALSE
+private - without septic tank,FALSE
+private connected to sewer,FALSE
+private flush toilet,FALSE
+private latrine,FALSE
+private latrine with slab,FALSE
+private latrine without slab,TRUE
+private pit toilet latrine,FALSE
+private toilet,FALSE
+private with no septic tank,FALSE
+private with septic tank,FALSE
+public connected to sewer,TRUE
+public latrine,TRUE
+public toilet,TRUE
+river,TRUE
+"River, canal",TRUE
+"river, canal",TRUE
+river/canal,TRUE
+river/stream/creek,TRUE
+rudimentary pit toilet latrine,TRUE
+sealed pit,FALSE
+septic pit,FALSE
+septic tank,FALSE
+septic tank/modern,FALSE
+septic tank/modern toilet,FALSE
+septic tank/toilet,FALSE
+Septic well,FALSE
+septic well,FALSE
+share flush toilet into residence,FALSE
+share flush toilet outside/yard,FALSE
+"share latrin, wo/box",TRUE
+share latrine with slab,FALSE
+share latrine without slab,TRUE
+"share latrine, box",FALSE
+share pit toilet/letrine,FALSE
+share toilet,FALSE
+shared flush toilet,FALSE
+Shared flush toilet,FALSE
+shared pit toilet latrine,FALSE
+shared trad. pit,FALSE
+shared traditional pit toilet,FALSE
+shared vent. imp lat,FALSE
+shared/public,FALSE
+simple latrine,FALSE
+slit latrine,FALSE
+stream/river,TRUE
+toilet connected to plot/yard,FALSE
+toilet connected to septic well,FALSE
+toilet connected to sewer,FALSE
+toilet hanging (on stilts),TRUE
+toilet in common,FALSE
+toilet inside,FALSE
+toilet outside,FALSE
+"toilet to creek, open space",FALSE
+toilet to others,FALSE
+toilet to pit,FALSE
+toilet to sewer,FALSE
+"Toilet without flush, don't know where",TRUE
+toilet-septic tank,FALSE
+trad. own pit toilet,FALSE
+trad. pit latrine,FALSE
+trad. pit toilet,FALSE
+trad. shared pit toi,FALSE
+trad. w bucket flush,FALSE
+trad. w tank flush,FALSE
+trad.pit toilet,FALSE
+tradicional pit toilet/latrine,FALSE
+tradit. pit toilet,FALSE
+traditional bucket flush,FALSE
+Traditional latrine,FALSE
+traditional latrine,FALSE
+traditional pip toilet,FALSE
+traditional pit latrine,FALSE
+traditional pit toil,FALSE
+traditional pit toilet,FALSE
+traditional pit toilet (covered),FALSE
+traditional pit toilet (uncovered),TRUE
+traditional pit/latrine unconnected to sewer/without septic,FALSE
+traditional tank flush,FALSE
+traditional toilet to sea/river (low tide),FALSE
+uncovered latrine,TRUE
+uncovered pit latrine - with slab,FALSE
+uncovered pit latrine - without slab,TRUE
+uncovered pit latrine no slab,TRUE
+uncovered pit latrine with slab,FALSE
+"uncovered pit latrine, no slab",TRUE
+"uncovered pit latrine, with slab",FALSE
+unventilated latrine,TRUE
+vent. imp. pit latr.,FALSE
+vent. imp. pit latrine,FALSE
+vent.imp.pit latrine,FALSE
+vented improved pit latrine,FALSE
+ventil. improv. pit,FALSE
+ventilated improv pt,FALSE
+ventilated improved (vip),FALSE
+ventilated improved latrine,FALSE
+ventilated improved pit,FALSE
+ventilated improved pit (vip) latrine,FALSE
+ventilated improved pit (vip) latrines,FALSE
+ventilated improved pit latrine,FALSE
+ventilated improved pit latrine (laa),FALSE
+ventilated improved pit latrine (vip),FALSE
+Ventilated Improved Pit latrine (VIP),FALSE
+ventilated improved pit toilet,FALSE
+ventilated improved pit/latrine (vip blair toilet),FALSE
+ventilated improved privy,FALSE
+ventilated latrine,FALSE
+Ventilated latrine,FALSE
+ventilated pit latrine,FALSE
+ventilated/improved pit latrine,FALSE
+vip,FALSE
+vip latrine,FALSE
+w.c,FALSE
+water flow do not know where,TRUE
+water sealed/slab,FALSE
+water sealed/slab la,FALSE
+water sealed/slab latrine,FALSE
+without cement sink,TRUE
+yard/bush/forest,TRUE
+ÿno facility/bush/field,TRUE
+ÿown flush toilet,FALSE
+ÿtraditional pit toilet,FALSE
+ÿventilated improved pit latrine,FALSE

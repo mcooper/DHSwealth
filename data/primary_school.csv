@@ -1,0 +1,28 @@
+primary_school,unfinished_primary
+NA,NA
+9,NA
+incomplete primary,TRUE
+no education,TRUE
+dk,TRUE
+1,TRUE
+0,TRUE
+8,TRUE
+No education,TRUE
+Incomplete primary,TRUE
+DK,TRUE
+other,TRUE
+don't know,TRUE
+Don't know,TRUE
+complete primary,FALSE
+higher,FALSE
+incomplete secondary,FALSE
+complete secondary,FALSE
+3,FALSE
+5,FALSE
+2,FALSE
+complete sec/ other,FALSE
+4,FALSE
+Higher,FALSE
+Incomplete secondary,FALSE
+Complete secondary,FALSE
+Complete primary,FALSE

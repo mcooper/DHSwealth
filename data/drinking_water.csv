@@ -1,0 +1,403 @@
+drinking_water,inadequate_water_urban,inadequate_water_rural
+NA,NA,NA
+11,FALSE,FALSE
+12,FALSE,FALSE
+....piped into dwelling,FALSE,FALSE
+....piped into yard/plot,FALSE,FALSE
+..piped into residence,FALSE,FALSE
+..piped into yard/plot,FALSE,FALSE
+bottled water,FALSE,FALSE
+Bottled water,FALSE,FALSE
+bottled water/refilling station,FALSE,FALSE
+bottler water,FALSE,FALSE
+faucet in residence,FALSE,FALSE
+in building,FALSE,FALSE
+in own land,FALSE,FALSE
+inside the house,FALSE,FALSE
+piped - into dwelling,FALSE,FALSE
+piped - into yard/plot,FALSE,FALSE
+piped in dwelling/yard/plot,FALSE,FALSE
+piped inside dwel.,FALSE,FALSE
+piped inside dwelling,FALSE,FALSE
+piped inside dwelln',FALSE,FALSE
+piped into compound,FALSE,FALSE
+piped into courtyard,FALSE,FALSE
+piped into dwelling,FALSE,FALSE
+Piped into dwelling,FALSE,FALSE
+piped into house/yard/plot,FALSE,FALSE
+"piped into res, yard",FALSE,FALSE
+piped into residence,FALSE,FALSE
+piped into residence/yard/plot,FALSE,FALSE
+piped into tap in yard/plot,FALSE,FALSE
+piped into yard,FALSE,FALSE
+piped into yard/lot,FALSE,FALSE
+piped into yard/plot,FALSE,FALSE
+piped into yard/plot/building,FALSE,FALSE
+piped into yard/spot,FALSE,FALSE
+piped onto property,FALSE,FALSE
+piped outside residence,FALSE,FALSE
+piped water from rural system,FALSE,FALSE
+piped water from utility company,FALSE,FALSE
+piped water within structure,FALSE,FALSE
+"piped, inside house",FALSE,FALSE
+purchased water,FALSE,FALSE
+purified water,FALSE,FALSE
+sachet water,FALSE,FALSE
+tanker truck,FALSE,FALSE
+Tanker truck,FALSE,FALSE
+tanker truck/bowser,FALSE,FALSE
+tanker truck/peddler,FALSE,FALSE
+tanker truck/water vendor,FALSE,FALSE
+tanker truck_(51),FALSE,FALSE
+tap in compound,FALSE,FALSE
+tap in courtyard,FALSE,FALSE
+tap in dwelling,FALSE,FALSE
+vendor,FALSE,FALSE
+vendor = cart with small tank,FALSE,FALSE
+vendor: cart with small tank,FALSE,FALSE
+water from vendor,FALSE,FALSE
+water in house,FALSE,FALSE
+water sachets,FALSE,FALSE
+water sale by company,FALSE,FALSE
+water seller,FALSE,FALSE
+water vender,FALSE,FALSE
+water vendor,FALSE,FALSE
+Water vendor,FALSE,FALSE
+ÿpiped into residence,FALSE,FALSE
+ÿû well in residence,FALSE,FALSE
+ÿwell in residence/yard/plot,FALSE,FALSE
+13,TRUE,FALSE
+14,TRUE,FALSE
+21,TRUE,FALSE
+22,TRUE,FALSE
+23,TRUE,FALSE
+24,TRUE,FALSE
+25,TRUE,FALSE
+31,TRUE,FALSE
+61,FALSE,FALSE
+62,FALSE,FALSE
+63,FALSE,FALSE
+71,FALSE,FALSE
+72,FALSE,FALSE
+73,FALSE,FALSE
+81,TRUE,FALSE
+82,TRUE,FALSE
+96,TRUE,FALSE
+99,TRUE,FALSE
+....dug well - protected,TRUE,FALSE
+....piped - public,TRUE,FALSE
+....spring water protected,TRUE,FALSE
+....tube well or borehole,TRUE,FALSE
+..public tap,TRUE,FALSE
+..public well_(23),TRUE,FALSE
+..public well_(33),TRUE,FALSE
+..well in residence_(21),TRUE,FALSE
+..well in residence_(31),TRUE,FALSE
+..well in yard/plot_(22),TRUE,FALSE
+aqueduct. public net,TRUE,FALSE
+arranged source,TRUE,FALSE
+barehole,TRUE,FALSE
+borehole,TRUE,FALSE
+borehole ?,TRUE,FALSE
+borehole in yard/plot,TRUE,FALSE
+borehole or tubewell,TRUE,FALSE
+borehole public,TRUE,FALSE
+borehole with pump,TRUE,FALSE
+Borehole with pump,TRUE,FALSE
+borehole with pump in residence,TRUE,FALSE
+borehole with pump outside residence,TRUE,FALSE
+borehole/ tubewell,TRUE,FALSE
+borehole/pump,TRUE,FALSE
+cart with small tank,FALSE,FALSE
+Cart with small tank,FALSE,FALSE
+covered spring,TRUE,FALSE
+covered well,TRUE,FALSE
+deet tubewell,TRUE,FALSE
+developed spring,TRUE,FALSE
+drilling equipped with pump,TRUE,FALSE
+"duct, protected well",TRUE,FALSE
+faucet not in reside,TRUE,FALSE
+improved spring,TRUE,FALSE
+improved stream,TRUE,FALSE
+inside neighbor's house,TRUE,FALSE
+manual pumped water,TRUE,FALSE
+manual/mechanical well,TRUE,FALSE
+mechanical or manual well,TRUE,FALSE
+mechanical pump well,TRUE,FALSE
+mod. public well,TRUE,FALSE
+mod. well in resid.,TRUE,FALSE
+neighbor - piped,TRUE,FALSE
+neighbor - unspecifi,TRUE,FALSE
+neighbor's faucet,TRUE,FALSE
+Neighbor's house,TRUE,FALSE
+neighbor's tap,TRUE,FALSE
+Neighbor's tap,TRUE,FALSE
+neighbor's tap/standpipe,TRUE,FALSE
+neighbour's tap,TRUE,FALSE
+other,TRUE,FALSE
+Other,TRUE,FALSE
+other piped,TRUE,FALSE
+other piped source,TRUE,FALSE
+"other source, by tub",TRUE,FALSE
+"other source, piped",TRUE,FALSE
+other spring,TRUE,FALSE
+outside house,TRUE,FALSE
+piped  outside dwelling,TRUE,FALSE
+piped - public tap / standpipe,TRUE,FALSE
+piped elsewhere,TRUE,FALSE
+piped from the neighbor,TRUE,FALSE
+piped into someone else's yard/plot,TRUE,FALSE
+piped outside compound,TRUE,FALSE
+piped outside dwel.,TRUE,FALSE
+piped outside dwellg,TRUE,FALSE
+piped outside dwelling,TRUE,FALSE
+Piped outside dwelling but within buikding,TRUE,FALSE
+piped public tap,TRUE,FALSE
+piped to neighbor,TRUE,FALSE
+piped to neighbour's house,TRUE,FALSE
+piped to yard/plot,TRUE,FALSE
+Piped to yard/plot,TRUE,FALSE
+piped water outside lot,TRUE,FALSE
+"piped water outside structure, but within lot",TRUE,FALSE
+"piped, outside house",TRUE,FALSE
+"piped, public utilit",TRUE,FALSE
+pretected source,TRUE,FALSE
+private aqueduct,TRUE,FALSE
+private well,TRUE,FALSE
+protect public well,TRUE,FALSE
+protect. well/borehl,TRUE,FALSE
+protected dug well,TRUE,FALSE
+protected dug well in dwelling/yard/plot,TRUE,FALSE
+protected public dug well,TRUE,FALSE
+protected public well,TRUE,FALSE
+protected public well/spring,TRUE,FALSE
+protected spring,TRUE,FALSE
+Protected spring,TRUE,FALSE
+protected well,TRUE,FALSE
+Protected well,TRUE,FALSE
+protected well in dwelling,TRUE,FALSE
+protected well in someone else's yard/plot,TRUE,FALSE
+protected well in yard/plot,TRUE,FALSE
+protected well in yard/polt,TRUE,FALSE
+protected well/spring in yard/plot,TRUE,FALSE
+protected/covered well,TRUE,FALSE
+public aqueduct,TRUE,FALSE
+public bore hole,TRUE,FALSE
+public borehole,TRUE,FALSE
+public faucet,TRUE,FALSE
+public fountain,TRUE,FALSE
+public fountain/tank,TRUE,FALSE
+public hand pump,TRUE,FALSE
+public open well,TRUE,FALSE
+public piped network,TRUE,FALSE
+public protected well,TRUE,FALSE
+public shallow well,TRUE,FALSE
+public tab,TRUE,FALSE
+public tap,TRUE,FALSE
+public tap/neighbours house,TRUE,FALSE
+public tap/standpipe,TRUE,FALSE
+Public tap/standpipe,TRUE,FALSE
+public to neighborhood,TRUE,FALSE
+public water,TRUE,FALSE
+public well,TRUE,FALSE
+Public well,TRUE,FALSE
+public well w/pump,TRUE,FALSE
+"public well, cement, covered",TRUE,FALSE
+public well_(22),TRUE,FALSE
+public well_(32),TRUE,FALSE
+public/neighbor's tubewell,TRUE,FALSE
+public/neighbor's well,TRUE,FALSE
+public/nieghbor's tap,TRUE,FALSE
+public/private well,TRUE,FALSE
+pump,TRUE,FALSE
+rural aqueduct,TRUE,FALSE
+rural/priv. aqueduct,TRUE,FALSE
+semi-protected well,TRUE,FALSE
+shallow tubewell,TRUE,FALSE
+source,TRUE,FALSE
+spring,TRUE,FALSE
+Spring,TRUE,FALSE
+spring - protected,TRUE,FALSE
+spring water,TRUE,FALSE
+"spring, kuwa",TRUE,FALSE
+stone tap (dhara),TRUE,FALSE
+stone tap/dhara,TRUE,FALSE
+tube well,TRUE,FALSE
+tube well or borehole,TRUE,FALSE
+Tube well or borehole,TRUE,FALSE
+tubed/piped public well or bore hole,TRUE,FALSE
+tubed/piped well or bore hole in dwelling/yard,TRUE,FALSE
+tubewell,TRUE,FALSE
+tubewell in yard/plot,TRUE,FALSE
+water from well,TRUE,FALSE
+water in drums/big cans,TRUE,FALSE
+water in plastic bag,TRUE,FALSE
+wather from neighbors,TRUE,FALSE
+well,TRUE,FALSE
+well in compound,TRUE,FALSE
+well in dwelling,TRUE,FALSE
+well in dwelling_(21),TRUE,FALSE
+well in dwelling_(31),TRUE,FALSE
+well in house/yard/plot,TRUE,FALSE
+"well in res, yard",TRUE,FALSE
+well in residence,TRUE,FALSE
+Well inside dwelling,TRUE,FALSE
+well into dwelling/yard/plot,TRUE,FALSE
+well or water wheel,TRUE,FALSE
+well outside residence,TRUE,FALSE
+well w/manual pump,TRUE,FALSE
+well w/o manual pump,TRUE,FALSE
+well water_(21),TRUE,FALSE
+well with electrical pump,TRUE,FALSE
+well with handpump,TRUE,FALSE
+well with pump,TRUE,FALSE
+well without electrical pump,TRUE,FALSE
+well without hndpump,TRUE,FALSE
+well without pump,TRUE,FALSE
+ÿpublic tap,TRUE,FALSE
+ÿpublic well,TRUE,FALSE
+ÿû piped into neighbor' residence,TRUE,FALSE
+ÿû piped into own residence,TRUE,FALSE
+ÿû public tap,TRUE,FALSE
+ÿû public well,TRUE,FALSE
+ÿû well in neighbor' residence,TRUE,FALSE
+32,TRUE,TRUE
+33,TRUE,TRUE
+34,TRUE,TRUE
+35,TRUE,TRUE
+36,TRUE,TRUE
+37,TRUE,TRUE
+38,TRUE,TRUE
+41,TRUE,TRUE
+42,TRUE,TRUE
+43,TRUE,TRUE
+44,TRUE,TRUE
+45,TRUE,TRUE
+46,TRUE,TRUE
+47,TRUE,TRUE
+51,TRUE,TRUE
+52,TRUE,TRUE
+53,TRUE,TRUE
+54,TRUE,TRUE
+55,TRUE,TRUE
+....dug - well unprotected,TRUE,TRUE
+....spring water unprotected,TRUE,TRUE
+..nile/canals,TRUE,TRUE
+..well in yard/plot_(32),TRUE,TRUE
+canal,TRUE,TRUE
+channel of river,TRUE,TRUE
+communal tap,TRUE,TRUE
+community stand pipe,TRUE,TRUE
+dam,TRUE,TRUE
+dam/lake/pond,TRUE,TRUE
+dugout,TRUE,TRUE
+gravity flow scheme,TRUE,TRUE
+gravity flow water,TRUE,TRUE
+hand pump in resid,TRUE,TRUE
+in neighbor's land,TRUE,TRUE
+in residence,FALSE,TRUE
+lake,TRUE,TRUE
+lake or stream,TRUE,TRUE
+"lake, pond",TRUE,TRUE
+lake/pond,TRUE,TRUE
+lake/pond/river/channel/irrigation channel,TRUE,TRUE
+motorcycle with three wheels,TRUE,TRUE
+neighbour's open well,TRUE,TRUE
+"nile, canal",TRUE,TRUE
+non proteceted well,TRUE,TRUE
+open dug well,TRUE,TRUE
+open public well,TRUE,TRUE
+open spring,TRUE,TRUE
+open well,TRUE,TRUE
+open well in dwelling,TRUE,TRUE
+open well in dwelling/yard,TRUE,TRUE
+open well in residence,TRUE,TRUE
+open well in yard,TRUE,TRUE
+open well in yard/plot,TRUE,TRUE
+open well in yard/polt,TRUE,TRUE
+open well with sump pump,TRUE,TRUE
+open well without sump pump,TRUE,TRUE
+open well/hole/cesspool in residence,TRUE,TRUE
+open well/hole/cesspool outside residence,TRUE,TRUE
+other rain water,TRUE,TRUE
+other rainwater,TRUE,TRUE
+pond / lake,TRUE,TRUE
+pond lake,TRUE,TRUE
+"pond, lake",TRUE,TRUE
+"pond, river, stream",TRUE,TRUE
+"pond,lake",TRUE,TRUE
+pond/ lake,TRUE,TRUE
+pond/dam/lake,TRUE,TRUE
+pond/lake,TRUE,TRUE
+pond/lake/dam,TRUE,TRUE
+pond/tank/lake,TRUE,TRUE
+public traditional well,TRUE,TRUE
+"public well, cement, not covered",TRUE,TRUE
+"public well, traditional",TRUE,TRUE
+rain water,TRUE,TRUE
+rain water_(41),TRUE,TRUE
+rainwater,TRUE,TRUE
+Rainwater,TRUE,TRUE
+rainwater cistern,TRUE,TRUE
+rainwater in a cistern,TRUE,TRUE
+rainwater in patio,TRUE,TRUE
+"rainwater, fixed tank",TRUE,TRUE
+refill water,TRUE,TRUE
+resevoir,TRUE,TRUE
+river,TRUE,TRUE
+river stream,TRUE,TRUE
+"river, lake, roof, irrigation canal",TRUE,TRUE
+"river, lake, sea",TRUE,TRUE
+"river, pond",TRUE,TRUE
+"river, spring",TRUE,TRUE
+"river, spring, stream",TRUE,TRUE
+"river, spring,stream",TRUE,TRUE
+"river, stream",TRUE,TRUE
+"river, stream, pond, lake",TRUE,TRUE
+"river,spring,pond/ma",TRUE,TRUE
+"river,stream",TRUE,TRUE
+river/ stream,TRUE,TRUE
+river/canal,TRUE,TRUE
+river/dam/lake/ponds/stream/canal/irirgation channel,TRUE,TRUE
+River/dam/lake/ponds/stream/canal/irirgation channel,TRUE,TRUE
+river/dam/lake/ponds/stream/canal/irrigation channel,TRUE,TRUE
+River/dam/lake/ponds/stream/canal/irrigation channel,TRUE,TRUE
+river/irrigation channel,TRUE,TRUE
+river/lake,TRUE,TRUE
+river/stream,TRUE,TRUE
+river/stream/pond/lake,TRUE,TRUE
+river/stream/pond/lake/dam,TRUE,TRUE
+river/stream/spring,TRUE,TRUE
+"sea, lake",TRUE,TRUE
+souce not protected,TRUE,TRUE
+"spring,river,creek",TRUE,TRUE
+spring/river/stream,TRUE,TRUE
+sprong/kuwa,TRUE,TRUE
+"surface water (river, dam,lake,stream...)",TRUE,TRUE
+surface water (river/dam),TRUE,TRUE
+surface water (river/dam/lake/pond/stream/canal/irrigation c,TRUE,TRUE
+surface water(river/dam/lake/pond/stream/canal/irrigation ch,TRUE,TRUE
+"surface water, spring, river, stream",TRUE,TRUE
+surface well/other well,TRUE,TRUE
+surface/other well,TRUE,TRUE
+trad. public well,TRUE,TRUE
+trad. well in resid.,TRUE,TRUE
+undeveloped spring,TRUE,TRUE
+unprotect spring,TRUE,TRUE
+unprotectd well,TRUE,TRUE
+unprotected dug well,TRUE,TRUE
+unprotected public well,TRUE,TRUE
+unprotected public well/spring,TRUE,TRUE
+unprotected spring,TRUE,TRUE
+Unprotected spring,TRUE,TRUE
+unprotected well,TRUE,TRUE
+Unprotected well,TRUE,TRUE
+unprotected well/spring in yard/plot,TRUE,TRUE
+ÿdam,TRUE,TRUE
+ÿpond/lake,TRUE,TRUE
+ÿriver/stream,TRUE,TRUE
+ÿspring,TRUE,TRUE
+ÿû dam,TRUE,TRUE
+ÿû lake,TRUE,TRUE
+ÿû river,TRUE,TRUE
+ÿû spring,TRUE,TRUE

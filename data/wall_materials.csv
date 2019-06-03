@@ -1,0 +1,417 @@
+wall_materials,inadequate_walls
+NA,NA
+1,TRUE
+2,TRUE
+3,TRUE
+4,TRUE
+5,TRUE
+6,TRUE
+7,TRUE
+11,TRUE
+12,TRUE
+13,TRUE
+14,TRUE
+15,TRUE
+21,TRUE
+22,TRUE
+23,TRUE
+24,TRUE
+25,TRUE
+26,TRUE
+27,TRUE
+28,TRUE
+29,TRUE
+31,FALSE
+32,FALSE
+33,FALSE
+34,FALSE
+35,FALSE
+36,FALSE
+37,FALSE
+38,FALSE
+41,FALSE
+42,FALSE
+43,FALSE
+44,FALSE
+96,FALSE
+99,FALSE
+"""pau-a-pique""",FALSE
+"""semi dur""",FALSE
+"""tabique, quinche""",FALSE
+....bamboo with mud,TRUE
+....bricks,FALSE
+....cane/palm/trunks,TRUE
+....cement,FALSE
+....cement blocks,FALSE
+....covered adobe,FALSE
+....dirt,TRUE
+....no walls,TRUE
+....paperboard,TRUE
+....plywood,TRUE
+....reused wood,TRUE
+....stone with mud,TRUE
+....stones with lime / cement,FALSE
+....uncovered adobe,TRUE
+....wood plank / shingles,FALSE
+adobe,TRUE
+Adobe,TRUE
+adobe (mud bricks),TRUE
+adobe (sun-dried brick),TRUE
+"adobe / ""tapial""",TRUE
+adobe covered,TRUE
+adobe not covered/bamboo/wood with mud,TRUE
+adobe with sod,TRUE
+animal dung,TRUE
+"asbestos, wood, zinc",FALSE
+"asbestos/wood,zinc",FALSE
+baked bricks,FALSE
+Baked bricks,FALSE
+"baked bricks, cement",FALSE
+bamboo,TRUE
+bamboo / palm / trunks,TRUE
+bamboo / pole with mud,TRUE
+bamboo / tree trunk with mud,TRUE
+bamboo / wood wit,TRUE
+bamboo with mud,TRUE
+Bamboo with mud,TRUE
+bamboo with mud plaster,TRUE
+bamboo with mud/clay/dung,TRUE
+bamboo without plaster,TRUE
+"bamboo(guadua), straw, other plants",TRUE
+"bamboo, planks",TRUE
+"bamboo, straw, other plants",TRUE
+Bamboo/Cane/Palm/Trunks,TRUE
+Bamboo/poles with mud,TRUE
+bamboo/sticks/mud,TRUE
+Bamboo/Sticks/mud,TRUE
+bamboo/tree trunks with mud,TRUE
+bamboo/wood with mud,TRUE
+Bambu with mud,TRUE
+bambu with mud,TRUE
+banco,TRUE
+"bare brick, cement blocks",FALSE
+bark / straw / palm / bamboo,TRUE
+bark/straw/branch/bamboo,TRUE
+block of cement,FALSE
+block/cements/bricks,FALSE
+blocks / bricks,FALSE
+blocks of clay,FALSE
+"blocks,cement",FALSE
+breeze blocks/parpens/stones/cement,FALSE
+brick,FALSE
+brick or stone,FALSE
+brick/cement,FALSE
+Brick/cement blocks,FALSE
+brick/cement blocks,FALSE
+bricks,FALSE
+Bricks,FALSE
+"bricks (""tijolos"")",FALSE
+"bricks, cement blocks, concrete etc.",FALSE
+bricks/polished wood/premanufactured material,FALSE
+bricks/polished wood/pre-manufactured material,FALSE
+Briks,FALSE
+burnt bricks,FALSE
+burnt bricks with cement,FALSE
+burnt bricks with mud,FALSE
+cane,TRUE
+cane / palm / trunks,TRUE
+Cane / palm / trunks,TRUE
+cane / palm / trunks/ bamboo,TRUE
+cane / palm / trunks/ grass/ sticks,TRUE
+cane / trunks / bamboo / reed,TRUE
+"cane, palm tree, trunks",TRUE
+"Cane, palm tree, trunks",TRUE
+"cane, palm, trunks",TRUE
+"cane, palmtree, trunks",TRUE
+cane/ palm/ trunks,TRUE
+Cane/ palm/ trunks,TRUE
+cane/palm,TRUE
+cane/palm tree/sticks/bamboo,TRUE
+cane/palm/trunks,TRUE
+Cane/palm/trunks,TRUE
+Cane/Palm/Trunks,TRUE
+cane/palm/trunks/bamboo,TRUE
+cane/palm/trunks/leaves,TRUE
+cane/tree trunks,TRUE
+cane/trunks,TRUE
+cane/trunks/bamboo/reed,TRUE
+canes/palms/trunks,TRUE
+canvas/tent,TRUE
+cardboard,TRUE
+Cardboard,TRUE
+"cardboard, plastic",TRUE
+"Cardboard, plastic",TRUE
+Cardboard/carton,TRUE
+cardboard/plastic,TRUE
+Carton,TRUE
+carton,TRUE
+carton/plastic,TRUE
+Carton/plastic,TRUE
+cement,FALSE
+Cement,FALSE
+cement block,FALSE
+cement blocks,FALSE
+Cement blocks,FALSE
+cement blocks or panels,FALSE
+cement blocks/cement,FALSE
+cement blocks/cement stones,FALSE
+Cement bloks,FALSE
+cement bricks,FALSE
+cement or stone blocks,FALSE
+"cement, stone blocks",FALSE
+cement/concrete,FALSE
+cement/monolit,FALSE
+cinder blocks,FALSE
+clay,TRUE
+clay blocks,TRUE
+cob/daub/mud/clay,TRUE
+compact dirt/mud,TRUE
+Compressed wood,TRUE
+compressed wood,TRUE
+concrete,FALSE
+concrete or stone blocks,FALSE
+Concrete/cement,FALSE
+corrugated asbestos,FALSE
+corrugated iron,FALSE
+corrugated iron sheet,FALSE
+corrugated iron sheets,FALSE
+corrugated iron/zinc,FALSE
+corrugated metal,FALSE
+covered adobe,FALSE
+Covered adobe,FALSE
+cut stone,FALSE
+cut stone and concrete,FALSE
+dirt,TRUE
+Dirt,TRUE
+dirt/ mud/ dung,TRUE
+Dirt/mud,TRUE
+discarded materials,TRUE
+disposable material,TRUE
+dung,TRUE
+dung / mud / sod,TRUE
+dung/mud/sod,TRUE
+earth,TRUE
+Estera,TRUE
+estera,TRUE
+finished - bricks,FALSE
+finished - cement,FALSE
+finished - cement blocks,FALSE
+finished - stone with lime / cement,FALSE
+finished - wood planks / shingles,FALSE
+finished bricks,FALSE
+finished walls cement,FALSE
+galvanized iron/ aluminium,FALSE
+galvanized iron/aluminum,FALSE
+grass,TRUE
+Grass,TRUE
+grass/thatch/mud,TRUE
+hair wool cloth,TRUE
+hair/wool/cloth,TRUE
+half solid,TRUE
+hard,FALSE
+interwoven sticks or reeds and mud ('bajareque'),TRUE
+iron sheets,FALSE
+iron/metal sheeting,FALSE
+jute/bamboo/mud,TRUE
+jute/bamboo/mud (katcha),TRUE
+makeshift/ cardboard/ reused material,TRUE
+makeshift/cardboard/reused material,
+meshed bamboo,TRUE
+metal,FALSE
+Metal,FALSE
+metal (iron or zinc sheet),FALSE
+Metal / zinc,FALSE
+Metal sheets,FALSE
+metalic sheet,FALSE
+Metalic sheets,FALSE
+mixed brick,FALSE
+mud,TRUE
+mud and pole,TRUE
+mud and poles,TRUE
+mud and sticks,TRUE
+Mud and sticks,TRUE
+mud blocks,TRUE
+mud bricks,TRUE
+Mud bricks,TRUE
+mud bricks with stones,TRUE
+Mud or mud bricks,TRUE
+mud or mud bricks,TRUE
+mud stones,TRUE
+Mud stones,TRUE
+mud walls,TRUE
+"mud, dung",TRUE
+mud/landcrete,TRUE
+mud/sand,TRUE
+mud/stones,TRUE
+Mud/stones,TRUE
+natural - cane / trunks,TRUE
+natural - mud,TRUE
+natural stone,TRUE
+Natural stone,TRUE
+natural walls,TRUE
+natural walls cane/tree trunks,TRUE
+no walls,TRUE
+No walls,TRUE
+other,FALSE
+OTHER,FALSE
+Other,FALSE
+other dung materials,TRUE
+other recycleble material,TRUE
+other_(41),FALSE
+palm,TRUE
+palm branches,TRUE
+palm leave (yagua),TRUE
+palm leaves,TRUE
+Palm leaves,TRUE
+palm tree,TRUE
+"palm tree ""yagua""",TRUE
+"palm, bamboo",TRUE
+"Palm, bamboo",TRUE
+palm/bamboo/thatch,TRUE
+Palm/trunks/bamboo,TRUE
+parpaing / cement,FALSE
+planks,TRUE
+plastered brick,TRUE
+plastic / cardboard,TRUE
+plastic/carton/used metal sheet,TRUE
+plywood,FALSE
+Plywood,FALSE
+plywood sheets,FALSE
+"plywood, reused wood",FALSE
+pole with mud,TRUE
+poles and mud,TRUE
+Poles and mud,TRUE
+poles with mud,TRUE
+polished wood,FALSE
+Polished wood,FALSE
+polymer cover,FALSE
+prefab material,FALSE
+Prefab material,FALSE
+prefabricated material,FALSE
+recycled wood,TRUE
+reinf basic material,FALSE
+reused wood,TRUE
+Reused wood,TRUE
+rocks,TRUE
+rudimentary - carton,TRUE
+rudimentary - plywood,TRUE
+rudimentary - reused wood,TRUE
+rudimentary - stone with mud,TRUE
+rudimentary walls,TRUE
+rudimentary walls stone with mud,TRUE
+rustic mat,TRUE
+Rustic mats,TRUE
+semi-dur,FALSE
+semi-hard (hard or other),FALSE
+semihard/semifinished/other,FALSE
+sheet,TRUE
+sheet metal,FALSE
+Shells (Casca),TRUE
+"shingle ""tejamanil""",FALSE
+shingle (tejamanil),FALSE
+slag,TRUE
+sod,TRUE
+Sticks (paus maticados),TRUE
+sticks and mud,TRUE
+sticks with mud/clay/dung,TRUE
+stome with lime / cement,FALSE
+stone,FALSE
+stone blocks,FALSE
+Stone blocks,FALSE
+Stone with cal or cement,FALSE
+stone with cal or cement,FALSE
+stone with cement,FALSE
+Stone with cement,FALSE
+stone with clay,FALSE
+stone with lime / cement,FALSE
+Stone with lime / cement,FALSE
+stone with lime cement,FALSE
+stone with lime or cement,FALSE
+stone with lime/ cement,FALSE
+Stone with lime/ cement,FALSE
+stone with lime/cement,FALSE
+Stone with lime/cement,FALSE
+stone with mud,FALSE
+Stone with mud,FALSE
+Stone with whitewash/cement,FALSE
+stones,FALSE
+Stones,FALSE
+Stones with mud,FALSE
+straw,TRUE
+Straw,TRUE
+straw /mats,TRUE
+straw with mud,TRUE
+"straw, thatch mats",TRUE
+"Straw, thatch mats",TRUE
+"straw, thatched mats",TRUE
+straw/palm/bamboo/wood,TRUE
+sundried bricks,TRUE
+sun-dried bricks,TRUE
+Sun-dried bricks,TRUE
+sun-dried bricks /mud bricks,TRUE
+Sun-dried bricks/mud brick,TRUE
+tabique / chinche,TRUE
+tarpaulin,TRUE
+tejamanil,FALSE
+tent,TRUE
+Tent,TRUE
+thatched,TRUE
+thatched/straw,TRUE
+tile shingles (tejamanil),FALSE
+tiles/ceramic,FALSE
+timber,FALSE
+"timber, wood",FALSE
+tin,TRUE
+Tin/ cardborad/ paper/ bags,TRUE
+tin/cardborad/paper/bags,TRUE
+tree trunks,TRUE
+trunks with mud,TRUE
+unbaked bricks,TRUE
+unbaked bricks/mud,TRUE
+Unbaked bricks/mud,TRUE
+unburnt bricks,TRUE
+un-burnt bricks,TRUE
+un-burnt bricks and plaster,TRUE
+unburnt bricks with mud,TRUE
+unburnt bricks with plaster,TRUE
+un-burnt bricks with plaster,TRUE
+uncovered adobe,TRUE
+Uncovered adobe,TRUE
+unplastered brick or mud wall,TRUE
+used wood,TRUE
+waste material,TRUE
+Waste material,TRUE
+waste materials,TRUE
+wattle,TRUE
+without walls,TRUE
+wood,TRUE
+Wood,TRUE
+wood and grass,TRUE
+wood planks,TRUE
+Wood planks,TRUE
+wood planks / shingles,TRUE
+Wood planks / shingles,TRUE
+wood planks/ shingles,TRUE
+Wood planks/ shingles,TRUE
+wood planks/shingles,TRUE
+Wood planks/shingles,TRUE
+wood planks/shingles/metal/corrugated,TRUE
+wood poles,TRUE
+Wood poles,TRUE
+wood stem,TRUE
+"wood, planks",TRUE
+"wood, timber",TRUE
+"Wood, timber",TRUE
+Wood/ metal planks,TRUE
+wood/bamboo,TRUE
+wood/branches,TRUE
+wood_(24),TRUE
+wood_(35),FALSE
+wooden plank,TRUE
+woods,TRUE
+woven bamboo,TRUE
+yagua,TRUE
+zinc,FALSE
+"zinc, canvas, plastics",FALSE
+"Zinc, metal",FALSE
+"zinc, metal [new code]",FALSE
