@@ -11,7 +11,10 @@ options(stringsAsFactors=F)
 #################################
 
 #For now, only use surveys that have GPS data and PR data (surveys without PR data are missing wealth data anyway)
-#Note: Only the DHS7 in India has GPS and no PR - this was extracted separately
+#Note: Only the DHS7 in India has GPS and no PR - so do a tacky workaround
+
+#scope <- data.frame(PR='IAHR74FL.DTA', WI=NA, GE='IAGE71FL.shp', cc='IA', num=7, subversion=1)
+
 scope <- read.csv('Wealth_Scope.csv') %>%
   filter(!is.na(GE) & !is.na(PR))
 
@@ -83,10 +86,11 @@ for (i in 1:nrow(scope)){
     }
   }
   
-  survey_code <- paste0(scope$cc[i], '-', scope$num[i], '-', scope$subversion[i])
-  dat$survey_code <- survey_code
-  dat$code <- paste0(dat$survey_code, '-', dat$clusterid)
+  surveycode <- paste0(scope$cc[i], '-', scope$num[i], '-', scope$subversion[i])
+  dat$surveycode <- surveycode
+  dat$code <- paste0(dat$surveycode, '-', dat$clusterid)
   dat$hh_code <- paste0(dat$code, '-', dat$householdno)
+  dat$resp_code <- paste0(dat$hh_code, '-', dat$respondent_no)
   
   #Now get spatial data
   spheadervars <- c('DHSCLUST', 'LATNUM', 'LONGNUM')
@@ -115,7 +119,7 @@ for (i in 1:nrow(scope)){
   }
   
   #Write and then read with a bind_rows to save on memory
-  write.csv(dat, paste0(survey_code, '.csv'), row.names=F)
+  write.csv(dat, paste0(surveycode, '.csv'), row.names=F)
   
 }
 
@@ -123,8 +127,8 @@ alldata <- Reduce(bind_rows,
                   lapply(list.files(pattern='.csv$'), 
                          function(x){read.csv(x, colClasses='character')}))
 
-#write.csv(alldata, '/home/matt/wealthvars_raw.csv', row.names=F)
-alldata <- read.csv('/home/matt/wealthvars_raw.csv')
+write.csv(alldata, '/home/matt/wealthvars_raw.csv', row.names=F)
+#alldata <- read.csv('/home/matt/wealthvars_raw.csv')
 
 ###############################
 #Calculate Cutpoints
@@ -170,9 +174,9 @@ getHHheadPrimary <- function(unfinished_primary, individual_number, household_he
 }
 
 hh <- alldata %>% 
-  select(hhid, householdno, clusterid, survey_code, code, television, refrigerator, car_truck, wealth_factor,
+  select(hhid, householdno, clusterid, surveycode, code, television, refrigerator, car_truck, wealth_factor,
          telephone, inadequate_housing, inadequate_sanitation, crowding, wealth_quintile, hhsize,
-         survey_month, hh_code, latitude, longitude, urban) %>%
+         survey_month, hh_code, resp_code, latitude, longitude, urban) %>%
   unique
 
 head <- alldata %>% unique %>%
@@ -183,12 +187,13 @@ head <- alldata %>% unique %>%
 hh <- merge(hh, head)
 
 #Check that each household was unique for all the cutpoints
-nrow(hh) == nrow(unique(alldata[ , c('hhid', 'householdno', 'clusterid', 'survey_code', 'code')]))
+nrow(hh) == nrow(unique(alldata[ , c('hhid', 'householdno', 'clusterid', 'surveycode', 'code')]))
 
 #Scale wealth vars from 0-1
 hh <- hh %>%
-  group_by(survey_code) %>%
-  mutate(wealth_factor_resc=wealth_factor - min(wealth_factor, na.rm=T),
+  group_by(surveycode) %>%
+  mutate(wealth_factor = as.numeric(wealth_factor),
+         wealth_factor_resc=wealth_factor - min(wealth_factor, na.rm=T),
          wealth_factor_resc=wealth_factor_resc/max(wealth_factor_resc, na.rm=T)) %>%
   data.frame
 
@@ -197,13 +202,13 @@ write.csv(hh, '/home/matt/wealthvars_hh.csv', row.names=F)
 
 #Calculate Cutpoints
 sdf <- hh %>% 
-  select(survey_code) %>% 
-  mutate(survey_code=as.character(survey_code)) %>%
+  select(surveycode) %>% 
+  mutate(surveycode=as.character(surveycode)) %>%
   unique
 
-baseline <- hh %>% filter(survey_code=='NG-5-1')
+baseline <- hh %>% filter(surveycode=='NG-5-1')
 
-others <- sdf %>% filter(survey_code!='NG-5-1')
+others <- sdf %>% filter(surveycode!='NG-5-1')
 
 bad <- NULL
 
@@ -235,8 +240,8 @@ getAnchor <- function(var, data){
   return(anchor)
 }
 
-for (i in others$survey_code){
-  sel <- hh %>% filter(survey_code==i)
+for (i in others$surveycode){
+  sel <- hh %>% filter(surveycode==i)
   
   #Drop columns that are greater than half NA
   for (col in c("inadequate_housing", "inadequate_sanitation", "crowding", "head_noprimary",
@@ -315,13 +320,13 @@ for (i in others$survey_code){
   
   anchormod <- lm(bsl_anchors[ix] ~ sel_anchors[ix])
   
-  others[others$survey_code==i, 'intercept'] <- anchormod$coefficients[1]
-  others[others$survey_code==i, 'slope'] <- anchormod$coefficients[2]
+  others[others$surveycode==i, 'intercept'] <- anchormod$coefficients[1]
+  others[others$surveycode==i, 'slope'] <- anchormod$coefficients[2]
   
-  print(which(others$survey_code==i)/nrow(others))
+  cat(i, which(others$surveycode==i)/nrow(others), '\n')
 }
 
-others <- bind_rows(others, data.frame(survey_code="NG-5-1", intercept=0, slope=1))
+others <- bind_rows(others, data.frame(surveycode="NG-5-1", intercept=0, slope=1))
 
 ##########################################
 #Model Cutputs in relation to Baseline
@@ -331,25 +336,37 @@ others <- bind_rows(others, data.frame(survey_code="NG-5-1", intercept=0, slope=
 
 hh_adj <- hh
 
-for (i in others$survey_code){
+for (i in others$surveycode){
   if (i %in% bad){
     hh_adj <- hh_adj %>%
-      filter(survey_code != i)
+      filter(surveycode != i)
     next
   }
   
-  hh_ix <- hh_adj$survey_code == i
+  hh_ix <- hh_adj$surveycode == i
   
-  hh_adj$wealth_factor_harmonized[hh_ix] <- hh_adj$wealth_factor_resc[hh_ix]*others$slope[others$survey_code==i] + others$intercept[others$survey_code==i]
+  hh_adj$wealth_factor_harmonized[hh_ix] <- hh_adj$wealth_factor_resc[hh_ix]*others$slope[others$surveycode==i] + others$intercept[others$surveycode==i]
 }
 
-hh_adj %>% group_by(survey_code) %>% summarize(mean(wealth_factor_harmonized, na.rm=T), sd(wealth_factor_harmonized, na.rm=T), n()) %>% View
+hh_adj %>% group_by(surveycode) %>% summarize(mean(wealth_factor_harmonized, na.rm=T), sd(wealth_factor_harmonized, na.rm=T), n()) %>% View
 
 just_hh <- hh_adj %>% 
-  select(hhid, householdno, code, clusterid, survey_code, 
+  select(hhid, householdno, code, clusterid, surveycode, resp_code,
          hhsize, survey_cmc=survey_month, hh_code, latitude, longitude, urban, 
          wealth_factor, wealth_quintile, wealth_factor_resc, wealth_factor_harmonized) %>%
-  mutate(survey_year=1900 + floor(survey_cmc/12),
+  mutate(survey_cmc=as.numeric(survey_cmc),
+         survey_year=1900 + floor(survey_cmc/12),
          survey_month= 1 + (survey_cmc - (survey_year - 1900)*12))
 
 write.csv(just_hh, '../../../matt/hh_wealth_harmonized.csv', row.names=F)
+
+#Export for Ian
+ian <- hh_adj %>%
+  group_by(code, surveycode, latitude, longitude, urban) %>%
+  summarize(survey_cmc=mean(survey_month, na.rm=T),
+            mean_wealth_factor_harmonized=mean(wealth_factor_harmonized, na.rm=T)) %>%
+  mutate(survey_cmc=round(survey_cmc),
+         survey_year=1900 + floor(survey_cmc/12),
+         survey_month= 1 + (survey_cmc - (survey_year - 1900)*12))
+
+write.csv(ian, '../../../matt/site_wealth_harmonized.csv', row.names=F)
