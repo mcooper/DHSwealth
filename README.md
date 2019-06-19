@@ -1,5 +1,5 @@
 # DHSwealth
-Scripts for processing and harmonizing wealth data from the [Demographic and Health Surveys](dhsprogram.com) according to [Rutstein and Staveteig, 2014](https://www.dhsprogram.com/pubs/pdf/MR15/MR15.pdf).
+Scripts for processing and harmonizing wealth data from the [Demographic and Health Surveys](https://www.dhsprogram.com) according to [Rutstein and Staveteig, 2014](https://www.dhsprogram.com/pubs/pdf/MR15/MR15.pdf).
 
 These scripts were made for my PhD dissertation work.  This is not intended to be a polished package, but might prove useful to other R users who are interested in harmonizing DHS wealth indices.  If you have any questions, feel free to [email me](mailto:mw.coop.r@gmail.com).
 
