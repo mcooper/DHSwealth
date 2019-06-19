@@ -7,16 +7,14 @@ library(foreign)
 options(stringsAsFactors=F)
 
 ##############################
-#Scope Available Datasets
+#Scope Available Datasets 
 #################################
 
 #For now, only use surveys that have GPS data and PR data (surveys without PR data are missing wealth data anyway)
-#Note: Only the DHS7 in India has GPS and no PR - so do a tacky workaround
-
-#scope <- data.frame(PR='IAHR74FL.DTA', WI=NA, GE='IAGE71FL.shp', cc='IA', num=7, subversion=1)
-
 scope <- read.csv('Wealth_Scope.csv') %>%
-  filter(!is.na(GE) & !is.na(PR))
+  filter(!is.na(GE) & !is.na(PR)) %>%
+  #Note: Only the DHS7 in India has GPS and no PR - so do a tacky workaround
+  bind_rows(data.frame(PR='IAHR74FL.DTA', WI=NA, GE='IAGE71FL.shp', cc='IA', num=7, subversion=1))
 
 vardat <- read.csv('WealthVars.csv')
 
