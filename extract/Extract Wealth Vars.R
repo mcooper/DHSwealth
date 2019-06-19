@@ -1,4 +1,25 @@
-setwd('/home/mattcoop/')
+##########################################
+#Set Directories and Baseline Survey
+#######################################
+
+#Directory where DHS stata files and shapefiles are located
+DATA_DIR <- 'G://My Drive/DHS New/'
+
+#Directory where Scoping result will be saved
+OUTPUT_DIR <- 'C://Users/matt/DHSwealth/scope/'
+
+#Temporary Directory for processed data outputs
+TEMP_DIR <- ''
+
+#Baseline Survey Code
+#Default baseline is Nigeria 5 1 from 2008.  Large sample size, complete records, wide variety of income levels
+BASELINE <- 'NG-5-1'
+
+##############################
+#Run Script
+#############################
+
+setwd(OUTPUT_DIR)
 
 library(haven)
 library(tidyverse)
@@ -18,12 +39,12 @@ scope <- read.csv('Wealth_Scope.csv') %>%
 
 vardat <- read.csv('WealthVars.csv')
 
-setwd('child-months/WealthTemp')
+setwd(TEMP_DIR)
 for (i in 1:nrow(scope)){
   print(paste0(round(i/nrow(scope), 3)*100, '% on ', scope$cc[i], '-', scope$num[i], '-', scope$subversion[i]))
   
   #Get values from PR files
-  dat <- read_dta(paste0('../../climatedisk/DHS/', scope$PR[i]))
+  dat <- read_dta(paste0(DATA_DIR, scope$PR[i]))
   
   #If wealth data is missing and there is no wi file, next
   if (!('hv271' %in% names(dat)) & is.na(scope$WI[i])){
@@ -40,7 +61,7 @@ for (i in 1:nrow(scope)){
   
   if (!is.na(scope$WI[i])){
     #Get wealth data if it is in separate file
-    wi <- read_dta(paste0('../../climatedisk/DHS/', scope$WI[i]))
+    wi <- read_dta(paste0(DATA_DIR, scope$WI[i]))
     names(wi) <- c('hhid', 'wealth_factor', 'wealth_index')
     
     wi$wealth_factor <- as.character(wi$wealth_factor)
@@ -125,8 +146,7 @@ alldata <- Reduce(bind_rows,
                   lapply(list.files(pattern='.csv$'), 
                          function(x){read.csv(x, colClasses='character')}))
 
-write.csv(alldata, '/home/matt/wealthvars_raw.csv', row.names=F)
-#alldata <- read.csv('/home/matt/wealthvars_raw.csv')
+write.csv(alldata, paste0(OUTPUT_DIR, 'wealthvars_raw.csv'), row.names=F)
 
 ###############################
 #Calculate Cutpoints
@@ -195,8 +215,7 @@ hh <- hh %>%
          wealth_factor_resc=wealth_factor_resc/max(wealth_factor_resc, na.rm=T)) %>%
   data.frame
 
-write.csv(hh, '/home/matt/wealthvars_hh.csv', row.names=F)
-#hh <- read.csv('/home/mattcoop/wealthvars_hh.csv', stringsAsFactors=F)
+write.csv(hh, paste0(OUTPUT_DIR, 'wealthvars_hh.csv'), row.names=F)
 
 #Calculate Cutpoints
 sdf <- hh %>% 
@@ -204,9 +223,9 @@ sdf <- hh %>%
   mutate(surveycode=as.character(surveycode)) %>%
   unique
 
-baseline <- hh %>% filter(surveycode=='NG-5-1')
+baseline <- hh %>% filter(surveycode==BASELINE)
 
-others <- sdf %>% filter(surveycode!='NG-5-1')
+others <- sdf %>% filter(surveycode!=BASELINE)
 
 bad <- NULL
 
@@ -324,13 +343,11 @@ for (i in others$surveycode){
   cat(i, which(others$surveycode==i)/nrow(others), '\n')
 }
 
-others <- bind_rows(others, data.frame(surveycode="NG-5-1", intercept=0, slope=1))
+others <- bind_rows(others, data.frame(surveycode=BASELINE, intercept=0, slope=1))
 
 ##########################################
 #Model Cutputs in relation to Baseline
 ##########################################
-
-#Baseline is Nigeria 5 1 from 2008.  Large sample size, complete records, wide variety of income levels
 
 hh_adj <- hh
 
@@ -356,15 +373,4 @@ just_hh <- hh_adj %>%
          survey_year=1900 + floor(survey_cmc/12),
          survey_month= 1 + (survey_cmc - (survey_year - 1900)*12))
 
-write.csv(just_hh, '../../../matt/hh_wealth_harmonized.csv', row.names=F)
-
-#Export for Ian
-ian <- hh_adj %>%
-  group_by(code, surveycode, latitude, longitude, urban) %>%
-  summarize(survey_cmc=mean(survey_month, na.rm=T),
-            mean_wealth_factor_harmonized=mean(wealth_factor_harmonized, na.rm=T)) %>%
-  mutate(survey_cmc=round(survey_cmc),
-         survey_year=1900 + floor(survey_cmc/12),
-         survey_month= 1 + (survey_cmc - (survey_year - 1900)*12))
-
-write.csv(ian, '../../../matt/site_wealth_harmonized.csv', row.names=F)
+write.csv(just_hh, paste0(OUTPUT_DIR, 'hh_wealth_harmonized.csv'), row.names=F)

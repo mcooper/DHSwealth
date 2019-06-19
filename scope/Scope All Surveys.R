@@ -1,4 +1,18 @@
-setwd('G://My Drive/DHS New')
+##############################
+#Set Directories
+#############################
+
+#Directory where DHS stata files and shapefiles are located
+DATA_DIR <- 'G://My Drive/DHS New'
+
+#Directory where Scoping result will be saved
+OUTPUT_DIR <- 'C://Users/matt/DHSwealth/scope/'
+
+##############################
+#Run Script
+#############################
+
+setwd(DATA_DIR)
 
 library(tidyverse)
 
@@ -46,4 +60,4 @@ all <- all %>%
             WI=tail(WI, n=1),
             SQ=tail(SQ, n=1))
 
-write.csv(all, 'C://Users/matt/DHSwealth/scope/Wealth_Scope.csv')
+write.csv(all, paste0(OUTPUT_DIR, 'Wealth_Scope.csv'))
