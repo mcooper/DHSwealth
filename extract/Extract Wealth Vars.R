@@ -3,13 +3,13 @@
 #######################################
 
 #Directory where DHS stata files and shapefiles are located
-DATA_DIR <- 'G://My Drive/DHS New/'
+DATA_DIR <- '~/mortalityblob/dhsraw/'
 
 #Directory where Scoping result will be saved
-OUTPUT_DIR <- 'C://Users/matt/DHSwealth/scope/'
+OUTPUT_DIR <- '~/'
 
 #Temporary Directory for processed data outputs
-TEMP_DIR <- ''
+TEMP_DIR <- '~/tmp/'
 
 #Baseline Survey Code
 #Default baseline is Nigeria 5 1 from 2008.  Large sample size, complete records, wide variety of income levels
@@ -40,7 +40,7 @@ scope <- read.csv('Wealth_Scope.csv') %>%
 vardat <- read.csv('WealthVars.csv')
 
 setwd(TEMP_DIR)
-for (i in 1:nrow(scope)){
+for (i in 181:nrow(scope)){
   print(paste0(round(i/nrow(scope), 3)*100, '% on ', scope$cc[i], '-', scope$num[i], '-', scope$subversion[i]))
   
   #Get values from PR files
@@ -114,7 +114,7 @@ for (i in 1:nrow(scope)){
   #Now get spatial data
   spheadervars <- c('DHSCLUST', 'LATNUM', 'LONGNUM')
   
-  spdat <- read.dbf(paste0('../../climatedisk/DHS/', gsub('.shp', '.dbf', scope$GE[i])), as.is=TRUE)
+  spdat <- read.dbf(paste0(DATA_DIR, gsub('.shp', '.dbf', scope$GE[i])), as.is=TRUE)
   if (!all(spheadervars %in% names(spdat))){
     cat(scope$GE[i], 'is missing necessary column names\n')
   }else{
@@ -138,7 +138,7 @@ for (i in 1:nrow(scope)){
   }
   
   #Write and then read with a bind_rows to save on memory
-  write.csv(dat, paste0(surveycode, '.csv'), row.names=F)
+  write.csv(dat, paste0(TEMP_DIR, surveycode, '.csv'), row.names=F)
   
 }
 
@@ -340,6 +340,8 @@ for (i in others$surveycode){
   others[others$surveycode==i, 'intercept'] <- anchormod$coefficients[1]
   others[others$surveycode==i, 'slope'] <- anchormod$coefficients[2]
   
+  hh[hh$surveycode == i, 'n_anchors'] <- length(bsl_anchors)
+  
   cat(i, which(others$surveycode==i)/nrow(others), '\n')
 }
 
@@ -365,12 +367,13 @@ for (i in others$surveycode){
 
 hh_adj %>% group_by(surveycode) %>% summarize(mean(wealth_factor_harmonized, na.rm=T), sd(wealth_factor_harmonized, na.rm=T), n()) %>% View
 
-just_hh <- hh_adj %>% 
-  select(hhid, householdno, code, clusterid, surveycode, resp_code,
-         hhsize, survey_cmc=survey_month, hh_code, latitude, longitude, urban, 
-         wealth_factor, wealth_quintile, wealth_factor_resc, wealth_factor_harmonized) %>%
-  mutate(survey_cmc=as.numeric(survey_cmc),
-         survey_year=1900 + floor(survey_cmc/12),
-         survey_month= 1 + (survey_cmc - (survey_year - 1900)*12))
+just_hh <- hh_adj %>%
+  mutate(survey_month=as.numeric(survey_month),
+         survey_year=1900 + floor(survey_month/12),
+         survey_month= 1 + (survey_month - (survey_year - 1900)*12)) %>% 
+  select(hh_code, dhssite_code=code, survey_code=surveycode, latitude, longitude, 
+         hhsize, urban, wealth_factor_orig=wealth_factor, wealth_quintile_orig=wealth_quintile, 
+         wealth_factor_resc, wealth_factor_harmonized,
+         survey_year, survey_month, n_anchors)
 
-write.csv(just_hh, paste0(OUTPUT_DIR, 'hh_wealth_harmonized.csv'), row.names=F)
+write.csv(just_hh, paste0(OUTPUT_DIR, 'hh_wealth_harmonized - ', BASELINE, '.csv'), row.names=F)

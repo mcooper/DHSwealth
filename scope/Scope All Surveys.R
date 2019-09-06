@@ -3,10 +3,10 @@
 #############################
 
 #Directory where DHS stata files and shapefiles are located
-DATA_DIR <- 'G://My Drive/DHS New'
+DATA_DIR <- '~/mortalityblob/dhsraw/'
 
 #Directory where Scoping result will be saved
-OUTPUT_DIR <- 'C://Users/matt/DHSwealth/scope/'
+OUTPUT_DIR <- '~/'
 
 ##############################
 #Run Script
