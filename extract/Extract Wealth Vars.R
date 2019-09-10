@@ -24,6 +24,7 @@ setwd(OUTPUT_DIR)
 library(haven)
 library(tidyverse)
 library(foreign)
+library(Hmisc)
 
 options(stringsAsFactors=F)
 
@@ -370,10 +371,21 @@ hh_adj %>% group_by(surveycode) %>% summarize(mean(wealth_factor_harmonized, na.
 just_hh <- hh_adj %>%
   mutate(survey_month=as.numeric(survey_month),
          survey_year=1900 + floor(survey_month/12),
-         survey_month= 1 + (survey_month - (survey_year - 1900)*12)) %>% 
+         survey_month= 1 + (survey_month - (survey_year - 1900)*12),
+         wealth_quintile_harmonized=cut2(wealth_factor_harmonized, g=5)) %>% 
   select(hh_code, dhssite_code=code, survey_code=surveycode, latitude, longitude, 
          hhsize, urban, wealth_factor_orig=wealth_factor, wealth_quintile_orig=wealth_quintile, 
          wealth_factor_resc, wealth_factor_harmonized,
          survey_year, survey_month, n_anchors)
+
+levels(just_hh$wealth_quintile_harmonized)[1] <- 'Poorest'
+levels(just_hh$wealth_quintile_harmonized)[2] <- 'Poorer'
+levels(just_hh$wealth_quintile_harmonized)[3] <- 'Average'
+levels(just_hh$wealth_quintile_harmonized)[4] <- 'Richer'
+levels(just_hh$wealth_quintile_harmonized)[5] <- 'Richest'
+
+#Fix Nepalese Years
+just_hh$survey_year[which(just_hh$survey_year > 2020 & just_hh$survey_month %in% seq(1, 9))] <- just_hh$survey_year[which(just_hh$survey_year > 2020 & just_hh$survey_month %in% seq(1, 9))] - 57
+just_hh$survey_year[which(just_hh$survey_year > 2020 & just_hh$survey_month %in% seq(10, 12))] <- just_hh$survey_year[which(just_hh$survey_year > 2020 & just_hh$survey_month %in% seq(10, 12))] - 56
 
 write.csv(just_hh, paste0(OUTPUT_DIR, 'hh_wealth_harmonized - ', BASELINE, '.csv'), row.names=F)
