@@ -45,7 +45,7 @@ for (type in surveytypes){
 }
 
 #in some cases, there is duplicate versioning!!
-#So aggregate in such a way that 
+#So aggregate in such a way that you use the newer version
 all <- all %>% 
   arrange(cc, num, subversion, BR, CR, HR, IR, MR, GE, KR, PR, WI, SQ) %>%
   group_by(num, cc, subversion) %>%
