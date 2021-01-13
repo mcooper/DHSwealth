@@ -5,8 +5,8 @@
 #Directory where DHS stata files and shapefiles are located
 DATA_DIR <- '~/mortalityblob/dhsraw/'
 
-#Directory where Scoping result will be saved
-OUTPUT_DIR <- '~/'
+#Directory where Scoping result and other metadata will be saved
+OUTPUT_DIR <- '~/DHSraw/metadata/'
 
 ##############################
 #Run Script
