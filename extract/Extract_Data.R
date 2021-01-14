@@ -35,7 +35,7 @@ for (i in 1:nrow(scope)){
     ##### Try PR files #########
     #Fallback to foreign::read.dta if haven::read_dta fails
     dat <- tryCatch(read_dta(paste0(DATA_DIR, scope$PR[i])), 
-                    error=function(x){read.dta(paste0(DATA_DIR, scope$PR[i]))})
+                    error=function(x){read_dta(paste0(DATA_DIR, scope$PR[i]), encoding='latin1')})
 
     #Drop unnecessary columns
     dat <- dat[ , vardat$PR[vardat$PR %in% names(dat)]]
@@ -47,7 +47,8 @@ for (i in 1:nrow(scope)){
 
   } else{
     ###### Else use IR ########
-    dat <- read_dta(paste0(DATA_DIR, scope$IR[i]))
+    dat <- tryCatch(read_dta(paste0(DATA_DIR, scope$IR[i])), 
+                    error=function(x){read_dta(paste0(DATA_DIR, scope$IR[i]), encoding='latin1')})
 
     #Drop unnecessary columns
     dat <- dat[ , vardat$IR[vardat$IR %in% names(dat)]]

@@ -83,16 +83,20 @@ data$survey_month <- data$date_cmc - 12 * (data$survey_year - 1900)
 # Save Data
 ##############################
 
+geo <- data %>% 
+	filter(!is.na(latitude)) %>%
+	select(code, latitude, longitude, survey_year) %>% 
+	unique
+
 #Write Geospatial Data
-write.csv(data %>% select(code, latitude, longitude, survey_year) %>%  unique,
-          '~/mortalityblob/dhs/wealthvars_geo.csv', row.names=F)
+write.csv(geo, '~/mortalityblob/dhs/wealthvars_geo.csv', row.names=F)
 
 final <- data %>%
   select(code, householdno, wealth_quintile, wealth_factor, survey_month, 
          water_source_nondrinking, water_source_drinking, has_electricity, has_radio,
          has_television, has_refrigerator, has_bicycle, has_motorcycle, has_car, has_telephone,
          toilet_type, material_wall, material_floor, material_roof, number_sleeping_rooms,
-         surveycode, latitude, longitude, urban, survey_year)
+         surveycode, latitude, longitude, urban, survey_year, site_weight=hhweight)
 
 write.csv(final, '~/mortalityblob/dhs/wealthvars_clean.csv', row.names=F)
 
