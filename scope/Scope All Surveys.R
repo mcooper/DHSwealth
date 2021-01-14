@@ -6,7 +6,7 @@
 DATA_DIR <- '~/mortalityblob/dhsraw/'
 
 #Directory where Scoping result and other metadata will be saved
-OUTPUT_DIR <- '~/DHSraw/metadata/'
+OUTPUT_DIR <- '~/DHSwealth/metadata/'
 
 ##############################
 #Run Script
@@ -27,7 +27,7 @@ makeFileNameDf <- function(f){
 }
 
 #Get all stata files or shapfiles
-surveytypes <- list.files(pattern='(DTA|dta|SHP|shp)$') %>%
+surveytypes <- list.files(pattern='^.{2}(GE|WI|HR|IR|PR).{5}(DTA|dta|SHP|shp)$') %>%
   substr(3, 4) %>%
   toupper %>% 
   unique
@@ -47,17 +47,12 @@ for (type in surveytypes){
 #in some cases, there is duplicate versioning!!
 #So aggregate in such a way that you use the newer version
 all <- all %>% 
-  arrange(cc, num, subversion, BR, CR, HR, IR, MR, GE, KR, PR, WI, SQ) %>%
+  arrange(cc, num, subversion, HR, IR, GE, PR, WI) %>%
   group_by(num, cc, subversion) %>%
-  summarize(BR=tail(BR, n=1),
-            CR=tail(CR, n=1),
-            HR=tail(HR, n=1),
+  summarize(HR=tail(HR, n=1),
             IR=tail(IR, n=1),
-            MR=tail(MR, n=1),
             GE=tail(GE, n=1),
-            KR=tail(KR, n=1),
             PR=tail(PR, n=1),
-            WI=tail(WI, n=1),
-            SQ=tail(SQ, n=1))
+            WI=tail(WI, n=1))
 
 write.csv(all, paste0(OUTPUT_DIR, 'Wealth_Scope.csv'))

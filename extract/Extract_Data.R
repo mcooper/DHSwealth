@@ -16,8 +16,9 @@ TEMP_DIR <- '/mnt/DHS/'
 
 #Previously scoped surveys
 scope <- read.csv(paste0(METADATA_DIR, 'Wealth_Scope.csv')) %>%
-  filter(!is.na(GE) & !(is.na(PR) & is.na(IR)))  %>%
-  select(num, cc, subversion, GE, PR, IR, WI)
+  filter(!(is.na(PR) & is.na(IR)))  %>%
+  select(num, cc, subversion, GE, PR, IR, WI) %>%
+  mutate(cc = ifelse(is.na(cc), 'NA', cc))
 
 #Remove processed surveys already in TEMP_DIR
 scope <- scope %>%
@@ -28,11 +29,13 @@ vardat <- read.csv(paste0(METADATA_DIR, 'WealthVars.csv'))
 setwd(TEMP_DIR)
 for (i in 1:nrow(scope)){
   print(paste0(round(i/nrow(scope), 3)*100, '% on ', scope$cc[i], '-', scope$num[i], '-', scope$subversion[i]))
- 
+
   #Read in data files
   if (!is.na(scope$PR[i])){
     ##### Try PR files #########
-    dat <- read_dta(paste0(DATA_DIR, scope$PR[i]))
+    #Fallback to foreign::read.dta if haven::read_dta fails
+    dat <- tryCatch(read_dta(paste0(DATA_DIR, scope$PR[i])), 
+                    error=function(x){read.dta(paste0(DATA_DIR, scope$PR[i]))})
 
     #Drop unnecessary columns
     dat <- dat[ , vardat$PR[vardat$PR %in% names(dat)]]
@@ -41,6 +44,7 @@ for (i in 1:nrow(scope)){
     for (n in 1:nrow(vardat)){
       names(dat)[names(dat)==vardat$PR[n]] <- vardat$variable[n]
     }
+
   } else{
     ###### Else use IR ########
     dat <- read_dta(paste0(DATA_DIR, scope$IR[i]))
@@ -101,30 +105,30 @@ for (i in 1:nrow(scope)){
   dat$hh_code <- paste0(dat$code, '-', dat$householdno)
   
   #Now get spatial data
-  spheadervars <- c('DHSCLUST', 'LATNUM', 'LONGNUM')
-  
-  spdat <- read.dbf(paste0(DATA_DIR, gsub('.shp', '.dbf', scope$GE[i])), as.is=TRUE)
-  if (!all(spheadervars %in% names(spdat))){
-    cat(scope$GE[i], 'is missing necessary column names\n')
-  }else{
-    spdat <- spdat[ , spheadervars]
-    spdat$num <- substr(scope$GE[i], 5, 5)
-    spdat$cc <- toupper(substr(scope$GE[i], 1, 2))
-    spdat$subversion <- ifelse(toupper(substr(scope$GE[i], 6, 6)) %in% as.character(seq(0, 9)), 1,
-                               ifelse(toupper(substr(scope$GE[i], 6, 6)) %in% LETTERS[1:8], 2,
-                                      ifelse(toupper(substr(scope$GE[i], 6, 6)) %in% LETTERS[9:17], 3,
-                                             ifelse(toupper(substr(scope$GE[i], 6, 6)) %in% LETTERS[18:26], 4, 99))))
-    spdat$code <- paste(spdat$cc, spdat$num, spdat$subversion, spdat$DHSCLUST, sep='-')
-    spdat <- spdat %>%
-      select(latitude=LATNUM, longitude=LONGNUM, code=code)
-  }
-  
-  initialsize <- nrow(dat)
-  dat <- merge(dat, spdat, all.x=T, all.y=F)
-  
-  if (initialsize != nrow(dat)){
-    cat("Mismatches in Spatial and Womens data.  Initial size:", initialsize, " now:", nrow(ir_sel), '\n')
-  }
+  # spheadervars <- c('DHSCLUST', 'LATNUM', 'LONGNUM')
+  # 
+  # spdat <- read.dbf(paste0(DATA_DIR, gsub('.shp', '.dbf', scope$GE[i])), as.is=TRUE)
+  # if (!all(spheadervars %in% names(spdat))){
+  #   cat(scope$GE[i], 'is missing necessary column names\n')
+  # }else{
+  #   spdat <- spdat[ , spheadervars]
+  #   spdat$num <- substr(scope$GE[i], 5, 5)
+  #   spdat$cc <- toupper(substr(scope$GE[i], 1, 2))
+  #   spdat$subversion <- ifelse(toupper(substr(scope$GE[i], 6, 6)) %in% as.character(seq(0, 9)), 1,
+  #                              ifelse(toupper(substr(scope$GE[i], 6, 6)) %in% LETTERS[1:8], 2,
+  #                                     ifelse(toupper(substr(scope$GE[i], 6, 6)) %in% LETTERS[9:17], 3,
+  #                                            ifelse(toupper(substr(scope$GE[i], 6, 6)) %in% LETTERS[18:26], 4, 99))))
+  #   spdat$code <- paste(spdat$cc, spdat$num, spdat$subversion, spdat$DHSCLUST, sep='-')
+  #   spdat <- spdat %>%
+  #     select(latitude=LATNUM, longitude=LONGNUM, code=code)
+  # }
+  # 
+  # initialsize <- nrow(dat)
+  # dat <- merge(dat, spdat, all.x=T, all.y=F)
+  # 
+  # if (initialsize != nrow(dat)){
+  #   cat("Mismatches in Spatial and Womens data.  Initial size:", initialsize, " now:", nrow(ir_sel), '\n')
+  # }
   
   #Write and then read with a bind_rows to save on memory
   write.csv(dat, paste0(TEMP_DIR, surveycode, '.csv'), row.names=F)
