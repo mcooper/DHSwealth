@@ -1,0 +1,592 @@
+codelabel,var
+ag2;;age,age
+ag2;;age de l'enfant,age
+ag2;;age de l'enfant (en années révolues),age
+ag2;;age enfant,age
+ag2;;age of child,age
+ag2;;edad (en años completos),age
+ag2;;edad del niño,age
+ag2;;edad del niño/a,age
+ag2;;how old is (name)?,age
+ag2;;idade da crianã‡a,age
+ag2;;idade da criança,age
+ag2;;uf1ab. edad del niño,age
+ag2a;;age en mois de l'enfant,age
+ag2a;;estimation de l'age (en mois révolus),age
+ag2c;;imputed age of child (months),age
+ag2m;;age of child in months,age
+ag2n;;age de l'enfant,age
+ag2u;;age de l'enfant unité,age
+ag2y;;age of child in years,age
+age;;,age
+age;;age,age
+age;;age en mois de l'enfant,age
+age;;anos,age
+age;;edad (en meses),age
+age_group;;age groups (5 years),age
+age1;;,age
+age2;;age,age
+age70;;,age
+agem;;age en mois,age
+agemois;;age in months,age
+agemois;;idade calculado em meses para criança menos de 5,age
+an4;;age of child,age
+at4;;child's age,age
+b5r2;;age,age
+br2;;age,age
+br2;;age (année revolue),age
+br2;;age (annee revolues),age
+br2;;age (completed years),age
+br2;;age (en annee revolues),age
+br2;;age de l'enfant,age
+br2;;age en ann‚es,age
+br2;;age of children under five years,age
+br2;;edad del niño,age
+br2;;edad del niño/a (años completos),age
+br5;;age child,age
+ca12;;age of child (filter),age
+cage;;age,age
+cage;;age (en mois),age
+cage;;age (in months),age
+cage;;age (mois),age
+cage;;âge (mois),age
+cage;;age (months from cmc calculation),age
+cage;;age (months),age
+cage;;age by months,age
+cage;;age en mois,age
+cage;;child age group,age
+cage;;edad (meses),age
+cage;;idade (mes),age
+cage;;idade (meses),age
+cage_11;;age,age
+cage_11;;âge,age
+cage_11;;age (en mois),age
+cage_11;;age (in months),age
+cage_11;;age by 11 months,age
+cage_11;;age cat 11,age
+cage_11;;age de l'enfant,age
+cage_11;;age group,age
+cage_11;;edad,age
+cage_11;;edad (meses),age
+cage_11;;idade,age
+cage_11_an;;edad cuando se hicieron mediciones antropométricas,age
+cage_1159n;;age group,age
+cage_2359n;;age group,age
+cage_5;;age,age
+cage_6;;age,age
+cage_6;;âge,age
+cage_6;;age (en mois),age
+cage_6;;age (from cmc calculations),age
+cage_6;;age (in months),age
+cage_6;;age (months),age
+cage_6;;age by 6 months,age
+cage_6;;age cat 6,age
+cage_6;;age de l'enfant,age
+cage_6;;age group,age
+cage_6;;child age group,age
+cage_6;;edad,age
+cage_6;;edad (meses),age
+cage_6;;idade,age
+cage_6;;tranche d'age en mois,age
+cage_6_an;;edad cuando se hicieron mediciones antropométricas,age
+cage_6m;;age,age
+cage_an;;age (months) at measurement,age
+cage_an;;edad  cuando se hicieron mediciones antropométricas (meses),age
+cage1_6;;age enfant,age
+cage11;;age,age
+cage2;;,age
+cage6;;age,age
+hh7c;;age,age
+hl5;;age,age
+hl5;;edad,age
+ag1c;;cmc date of birth of child,birthdate_cmc
+cdob;;data de nasc. (cmc),birthdatecmc
+cdob;;data de nascimento (cmc),birthdatecmc
+cdob;;date de naissance (cmc),birthdatecmc
+cdob;;date de naissance de l'enfant (cmc),birthdatecmc
+cdob;;date de naissance enfant (cmc),birthdatecmc
+cdob;;date naissance (cmc),birthdatecmc
+cdob;;date of birth,birthdatecmc
+cdob;;date of birth (cmc),birthdatecmc
+cdob;;date of birth of child (cmc),birthdatecmc
+cdob;;fecha de nacimiento (cmc),birthdatecmc
+cdob;;fecha de nacimiento de niño,birthdatecmc
+cdob;;fecha de nacimiento del niño (cmc),birthdatecmc
+cdob;;fecha de nacimiento del niño/a (cmc),birthdatecmc
+ag1_d;;date of birth: day,birthday
+ag1d;;date of birth - day,birthday
+ag1d;;date of birth: day,birthday
+ag1d;;day of birth of child,birthday
+ag1d;;día de nacimiento,birthday
+ag1d;;dia de nacimiento del niño,birthday
+ag1d;;día de nacimiento del niño,birthday
+ag1d;;día de nacimiento del niño/a,birthday
+ag1d;;dia de nascimento da crianã‡a,birthday
+ag1d;;dia de nascimento da criança,birthday
+ag1d;;jour de naissance de l'enfant,birthday
+ag1d;;jour naissance enfant,birthday
+br3d;;day of birth,birthday
+br3d;;day of birth of child,birthday
+br3d;;día de nacimiento,birthday
+br3d;;dia de nacimiento del niño,birthday
+br3d;;dia de nascimento,birthday
+br3d;;jour,birthday
+br3d;;jour de naissance,birthday
+br3d;;jour de naissance de l'enfant,birthday
+br3d;;jour naissance,birthday
+br4d;;jour de naissance,birthday
+hf9d;;day of birth,birthday
+hf9d;;day of birth of child,birthday
+hf9d;;year/month/day of birth day,birthday
+ub1d;;day of birth of child,birthday
+uf10d;;day,birthday
+uf10d;;day of birth,birthday
+uf10d;;day of birth of child,birthday
+uf10d;;dia,birthday
+uf10d;;dia de nacimiento del niño,birthday
+uf10d;;jour de naissance de enfant,birthday
+uf10d;;jour de naissance de l'enfant,birthday
+uf10d;;uf10d. day of birth of child,birthday
+uf10d;;uf10d.day of birth of child,birthday
+ag1m;;date of birth - month,birthmonth
+ag1m;;date of birth: month,birthmonth
+ag1m;;mes de nacimiento del niño,birthmonth
+ag1m;;mes de nacimiento del niño/a,birthmonth
+ag1m;;mes de nascimento da crianã‡a,birthmonth
+ag1m;;mês de nascimento da criança,birthmonth
+ag1m;;mois de naissance de l'enfant,birthmonth
+ag1m;;mois naissance enfant,birthmonth
+ag1m;;month of birth of child,birthmonth
+ag1m;;uf1a. mes de nacimiento del niño,birthmonth
+br3m;;mes de nacimiento,birthmonth
+br3m;;mes de nacimiento del niño,birthmonth
+br3m;;mes de nascimento,birthmonth
+br3m;;mês de nascimento,birthmonth
+br3m;;mois,birthmonth
+br3m;;mois de naissance,birthmonth
+br3m;;mois de naissance de l'enfant,birthmonth
+br3m;;mois naissance,birthmonth
+br3m;;month of birth,birthmonth
+br3m;;month of birth of child,birthmonth
+br4m;;mois de naissance,birthmonth
+hf9m;;month of birth,birthmonth
+hf9m;;month of birth of child,birthmonth
+hf9m;;year/month/day of birth month,birthmonth
+ub1m;;month of birth of child,birthmonth
+uf10m;;mes,birthmonth
+uf10m;;mes de nacimiento del niño,birthmonth
+uf10m;;mois de naissance de enfant,birthmonth
+uf10m;;mois de naissance de l'enfant,birthmonth
+uf10m;;month,birthmonth
+uf10m;;month of birth,birthmonth
+uf10m;;month of birth of child,birthmonth
+uf10m;;uf10m. month of birth of child,birthmonth
+uf10m;;uf10m.month of birth of child,birthmonth
+ag1y;;annã©e de naissance de l'enfant,birthyear
+ag1y;;annee de naissance de l'enfant,birthyear
+ag1y;;année de naissance de l'enfant,birthyear
+ag1y;;année naissance enfant,birthyear
+ag1y;;año de nacimeinto del niño,birthyear
+ag1y;;año de nacimiento del niño,birthyear
+ag1y;;año de nacimiento del niño/a,birthyear
+ag1y;;ano de nascimento da crianã‡a,birthyear
+ag1y;;ano de nascimento da criança,birthyear
+ag1y;;date of birth - year,birthyear
+ag1y;;date of birth: year,birthyear
+ag1y;;uf1a. año de nacimiento del niño,birthyear
+ag1y;;year of birth of child,birthyear
+br3y;;anne de naissance de l'enfant,birthyear
+br3y;;ann‚e,birthyear
+br3y;;ann‚e de naissance,birthyear
+br3y;;ann‚e de naissance de l'enfant,birthyear
+br3y;;annee de naissance,birthyear
+br3y;;année de naissance,birthyear
+br3y;;annee naissance,birthyear
+br3y;;año de nacimiento,birthyear
+br3y;;año de nacimiento del niño,birthyear
+br3y;;ano de nascimento,birthyear
+br3y;;l'ann‚e de naissance de l'enfant,birthyear
+br3y;;year of birth,birthyear
+br3y;;year of birth of child,birthyear
+br4y;;année de naissance,birthyear
+hf9y;;year of birth,birthyear
+hf9y;;year of birth of child,birthyear
+hf9y;;year/month/day of birth year,birthyear
+ub1y;;year of birth of child,birthyear
+uf10y;;annee de naissance de enfant,birthyear
+uf10y;;annee de naissance de l'enfant,birthyear
+uf10y;;ano,birthyear
+uf10y;;año de nacimiento del niño,birthyear
+uf10y;;uf10y. year of birth of child,birthyear
+uf10y;;uf10y.year of birth of child,birthyear
+uf10y;;year,birthyear
+uf10y;;year of birth,birthyear
+uf10y;;year of birth of child,birthyear
+an11;;child's length or height (centimetres),height
+an2;;an2. child's length or height,height
+an2;;an2.child's length or height,height
+an2;;child's length or height,height
+an2a;;child's length or height,height
+an4;;child's length or height (centimeters),height
+an4;;child's length or height (centimetres),height
+an4;;child’s length or height,height
+an4;;comprimento ou altura da crianã§a (centã­metros),height
+an4;;estatura / talla del niño (centimetros),height
+an4;;grandeur ou taille de l'enfant,height
+an4;;grandeur ou taille de lâ€™enfant (centimã¨tre),height
+an4;;longitud o talla del niño/a (centímetros),height
+an4_n;;child length/ height: number,height
+an4b;;child's length or height (centimetres),height
+an4n;;child length/ height: number,height
+height;;,height
+height;;altura (cm),height
+height;;altura(cm),height
+height;;child's height,height
+height;;child's length or height,height
+height;;child  length or height,height
+height;;height (cm),height
+height;;height in cm,height
+height;;longueur ou taille de l'enfant,height
+height;;taille (cm),height
+height;;taille de l'enfant,height
+height1;;,height
+height1;;height (cm),height
+height1;;heights in centimeters,height
+heightcm;;,height
+heigt;;height,height
+cdoi;;date de l'interview enfant (cmc),interviewdatecmc
+cdoi;;date de l'interview enquête enfant moins de 5 ans,interviewdatecmc
+cdoi;;date l'interview de l'enfant (cmc),interviewdatecmc
+cdoi;;date of interview (cmc),interviewdatecmc
+cdoi;;date of interview child (cmc),interviewdatecmc
+cdoi;;date of interview of child (cmc),interviewdatecmc
+cdoi;;fecha de entrevista de niño (cmc),interviewdatecmc
+cdoi;;fecha de entrevista del niño (cmc),interviewdatecmc
+cdoi;;fecha de la entrevista de niño (cmc),interviewdatecmc
+cdoi;;fecha de la entrevista del niño (cmc),interviewdatecmc
+cdoi;;fecha de la entrevista del niño/a (cmc),interviewdatecmc
+cdoi;;fecha de la entrevista niño (cmc),interviewdatecmc
+cmcdoi;;data de entrevista (cmc),interviewdatecmc
+cmcdoi;;date d'interview (cmc),interviewdatecmc
+cmcdoi;;date de l'interview (cmc),interviewdatecmc
+cmcdoi;;date de l'interview(cmc),interviewdatecmc
+cmcdoi;;date interview (cmc),interviewdatecmc
+cmcdoi;;date of interview (cmc),interviewdatecmc
+cmcdoi;;fecha de entrevista (cmc),interviewdatecmc
+"cmcdoic;;data de entrevista, criança (cmc)",interviewdatecmc
+cmcdoic;;data of a child's interview,interviewdatecmc
+cmcdoic;;date d'interview de l'enfant (cmc),interviewdatecmc
+cmcdoic;;date d'interview enfant (cmc),interviewdatecmc
+cmcdoic;;date of interview child (cmc),interviewdatecmc
+cmcdoic;;día de entrevista del niño (cmc),interviewdatecmc
+uf8_1dd;;day of interview 1,interviewday
+uf8_2dd;;day of interview 2,interviewday
+uf8_3dd;;day of interview 3,interviewday
+uf8d;;date of interview: day,interviewday
+uf8d;;day,interviewday
+uf8d;;day of interview,interviewday
+uf8d;;day of interview uf8d,interviewday
+uf8d;;dia,interviewday
+uf8d;;dia da entrevista,interviewday
+uf8d;;día de entrevista,interviewday
+uf8d;;dia de la entrevista,interviewday
+uf8d;;día de la entrevista,interviewday
+uf8d;;jour de interview,interviewday
+uf8d;;jour de l'interview,interviewday
+uf8d;;jour interview,interviewday
+uf8d;;uf8d. day of interview,interviewday
+uf8d;;uf8d. día de la entrevista,interviewday
+uf8_1dm;;month of interview 1,interviewmonth
+uf8_2dm;;month of interview 2,interviewmonth
+uf8_3dm;;month of interview 3,interviewmonth
+uf8m;;date of interview: month,interviewmonth
+uf8m;;mãªs da entrevista,interviewmonth
+uf8m;;mês,interviewmonth
+uf8m;;mês da entrevista,interviewmonth
+uf8m;;mes de entrevista,interviewmonth
+uf8m;;mes de la entrevista,interviewmonth
+uf8m;;mois de interview,interviewmonth
+uf8m;;mois de l'interview,interviewmonth
+uf8m;;mois interview,interviewmonth
+uf8m;;month,interviewmonth
+uf8m;;month of interview,interviewmonth
+uf8m;;month of interview uf8m,interviewmonth
+uf8m;;uf8m. mes de la entrevista,interviewmonth
+uf8m;;uf8m. month of interview,interviewmonth
+uf8_1dy;;year of interview 1,interviewyear
+uf8_2dy;;year of interview 2,interviewyear
+uf8_3dy;;year of interview 3,interviewyear
+uf8y;;annã©e de l'interview,interviewyear
+uf8y;;annee de interview,interviewyear
+uf8y;;annee de l'interview,interviewyear
+uf8y;;année de l'interview,interviewyear
+uf8y;;année interview,interviewyear
+uf8y;;ano da entrevista,interviewyear
+uf8y;;año de entrevista,interviewyear
+uf8y;;año de la entrevista,interviewyear
+uf8y;;date of interview: year,interviewyear
+uf8y;;uf8y. año de la entrevista,interviewyear
+uf8y;;uf8y. year of interview,interviewyear
+uf8y;;year,interviewyear
+uf8y;;year of interview,interviewyear
+uf8y;;year of interview uf8y,interviewyear
+chclnoa;;region,region
+chclnob;;district,region
+chhi7;;region,region
+chrgno;;region,region
+cwt;;changwat/province,region
+d0;;province,region
+d1;;regency,region
+d2;;subregency,region
+d3;;village,region
+dist;;district,region
+distr;;district,region
+district;;administrative district,region
+district;;district,region
+gover;;governorate,region
+hh1a;;district,region
+hh1a;;province,region
+hh1a;;region number,region
+hh1a;;region/ed number,region
+hh1aco;;district code (cluster information file fbs),region
+hh6;;area,region
+hh6;;área,region
+hh6;;area (original),region
+hh6;;area:sector,region
+hh6;;hh6. area,region
+hh6;;hh6.area,region
+hh6;;region,region
+hh6b;;region,region
+hh7;;administrative regions,region
+hh7;;aimag/ city code,region
+hh7;;county,region
+hh7;;département,region
+hh7;;district,region
+hh7;;district (original),region
+hh7;;districts,region
+hh7;;division,region
+hh7;;dominio del estudio,region
+hh7;;douala/yaounde/province,region
+hh7;;dzongkhag,region
+hh7;;espaces de programmation territoriale (ept),region
+hh7;;governorate,region
+hh7;;governorates,region
+hh7;;hh7. region,region
+hh7;;hh7.region,region
+hh7;;khoroo,region
+hh7;;lga,region
+hh7;;locality,region
+hh7;;muhafaza,region
+hh7;;oblast,region
+hh7;;préfecture,region
+hh7;;province,region
+hh7;;provincia,region
+hh7;;província,region
+hh7;;provincia o comarca,region
+hh7;;regiã£o,region
+hh7;;região,region
+hh7;;region,region
+hh7;;región,region
+hh7;;région,region
+hh7;;region - oblast,region
+hh7;;region d'enquête,region
+hh7;;region/governorate,region
+hh7;;region/municipality,region
+hh7;;regional corporation,region
+hh7;;regions,region
+hh7;;state,region
+hh7;;state name,region
+hh7;;subregion,region
+hh7;;wilaya,region
+hh7;;zone,region
+hh7_det;;administrative and geographic detailed regions,region
+hh71;;muhafaza,region
+hh72r;;district,region
+hh7a;;aimag/ city code,region
+hh7a;;aimag/ city name and code,region
+hh7a;;arrondissement,region
+hh7a;;arrondissement/district,region
+hh7a;;departamento,region
+hh7a;;département,region
+hh7a;;district,region
+hh7a;;dominio,region
+hh7a;;lga,region
+hh7a;;prefecture,region
+hh7a;;province,region
+hh7a;;qadha,region
+hh7a;;region,region
+hh7a;;region administrative,region
+hh7a;;région naturelle,region
+hh7a;;regions,region
+hh7a;;tipo de hogar cuando se seleccionó la muestra,region
+hhdis;;district,region
+hhdis2;;district,region
+hhreg;;region,region
+hi1a;;province,region
+hi7;;county/ward,region
+hi7;;district,region
+hi7;;domaines,region
+hi7;;entity,region
+hi7;;governorate,region
+hi7;;local government area,region
+hi7;;localité,region
+hi7;;préfecture,region
+hi7;;province,region
+hi7;;regiao,region
+hi7;;região,region
+hi7;;region,region
+hi7;;région,region
+hi7;;region number,region
+hi7;;region of residence,region
+hi7;;regions,region
+hi7;;state,region
+hi7;;sub-regiones de planificacion,region
+hi77;;region of residence,region
+hi777;;region,region
+"hi7a;;aimag,capital city",region
+hi7a;;district,region
+hi7a;;faritany,region
+hi7a;;prefecture,region
+hi7a;;province,region
+hi7a;;provincia de,region
+hi7a;;region,region
+hi7aa;;code du departement,region
+hi7aa;;district,region
+hi7b;;arrondissement,region
+hi7b;;departement,region
+hi7b;;province,region
+hi7b;;ville/canton,region
+hi7bb;;settlment,region
+hi7c;;canton,region
+hi7i;;ile,region
+hi7l;;code localit‚,region
+hi7p;;prefecture,region
+hisd;;state/division,region
+hit;;province,region
+hix;;commune,region
+ident1;;province,region
+nuts2;;region,region
+prov;;provincia,region
+province;;province,region
+province;;provinces,region
+province;;provincia,region
+provincia2;;provincia con división de buenos aires,region
+region;;,region
+region;;agrupación de departamentos,region
+region;;região,region
+region;;region,region
+region;;region de residence,region
+region;;región utilizada por senaf,region
+region2;;region de residence,region
+uf1;;region/ed number,region
+uf1;;uf1. cluster number,region
+uf1a;;region number,region
+uf1a;;uf1. provincia,region
+uf1b;;uf1. departamento,region
+ufa;;province/city,region
+ufr;;region,region
+ufreg;;region,region
+wregion;;,region
+chweigh1;;poids de ponderation,sample_weight
+chweigh2;;,sample_weight
+chweight;;,sample_weight
+chweight;;adjusted normalized child weight,sample_weight
+"chweight;;chidlren""s sample weight",sample_weight
+chweight;;child's weight,sample_weight
+chweight;;child sample weight,sample_weight
+chweight;;child weight,sample_weight
+chweight;;children's sample weight,sample_weight
+chweight;;children's under five sample weight,sample_weight
+chweight;;children's weight,sample_weight
+chweight;;children sample weight,sample_weight
+chweight;;children under-5's sample weight,sample_weight
+chweight;;children under 5's sample weight,sample_weight
+chweight;;children under 5 sample weight,sample_weight
+chweight;;children weight,sample_weight
+chweight;;coefficient de pondération enfant 0-59 mois,sample_weight
+chweight;;peso muestral de los niños,sample_weight
+chweight;;peso muestral de los niños (poblacionales),sample_weight
+chweight;;peso para los ninos,sample_weight
+chweight;;pesos de la muestra de niños,sample_weight
+chweight;;poids de ponderation  (normalise),sample_weight
+chweight;;poids de ponderation des enfants,sample_weight
+chweight;;poids de ponderation enfant,sample_weight
+chweight;;poids des enfants,sample_weight
+chweight;;poids échantillon enfants,sample_weight
+chweight;;poids enfant,sample_weight
+chweight;;poids normalisé des enfants,sample_weight
+chweight;;ponderación del niño,sample_weight
+chweight;;ponderación niño,sample_weight
+chweight;;ponderación niños,sample_weight
+chweight;;ponderador de niños,sample_weight
+chweight;;ponderation enfant,sample_weight
+chweight;;pondération fichier enfants,sample_weight
+chweight;;relative children weight,sample_weight
+chweight;;sample weight - children,sample_weight
+chweight;;sample weight - sample self weighted,sample_weight
+chweight;;sample weight (children),sample_weight
+chweight;;under-5 sample weight,sample_weight
+chweight;;under - 5 sample weight,sample_weight
+chweight;;under 5 sample weight,sample_weight
+chweight;;under 5 weight,sample_weight
+chweight;;under five weight (normalized),sample_weight
+chweight;;weight for ch,sample_weight
+chweight;;weight for children,sample_weight
+chweight2;;,sample_weight
+chweightkano;;kano children's sample weight,sample_weight
+chweightlagos;;lagos children's sample weight,sample_weight
+pchweight;;under five population weight,sample_weight
+an1a;;sexe de l'enfant,sex
+an2sexe;;sexe de l'enfant,sex
+br1aa;;sexe de l'enfant,sex
+br2a;;sex of child,sex
+f04_01;;(4) sexo,sex
+hl3;;gender,sex
+hl3;;sex,sex
+hl3;;sex of hh member,sex
+hl3;;sexe,sex
+hl3;;sexe de l'enfant,sex
+hl3;;sexo,sex
+hl3a;;sex,sex
+hl4;;gender,sex
+hl4;;hl4.sex,sex
+hl4;;sex,sex
+hl4;;sex of member,sex
+hl4;;sexe,sex
+hl4;;sexo,sex
+hl4old;;sex,sex
+sex;;sex,sex
+sex;;sexe,sex
+sex;;sexe de l'enfant,sex
+sex;;sexo,sex
+sexe;;sexe enfant,sex
+an1;;an1. child's weight,weight
+an1;;an1. what is child's weight?,weight
+an1;;an1.child's weight (kilograms),weight
+an1;;child's weight (kilograms),weight
+an1;;peso da criança,weight
+an1;;poids de enfant (kilogrammes),weight
+an1;;poids de l'enfant (kilogrammes),weight
+an3;;child's weight (kilograms),weight
+an3;;child weight,weight
+an3;;child’s weight,weight
+an8;;child's weight (kilograms),weight
+weight;;child's weight,weight
+weight;;child's weight (kilograms),weight
+weight;;child's weight /kilogram/,weight
+weight;;child weight,weight
+weight;;child weight (kg),weight
+weight;;peso (kg),weight
+weight;;peso actual (kg),weight
+weight;;peso del niño  (kg),weight
+weight;;peso(kg),weight
+weight;;poids (kg),weight
+weight;;poids de l'enfant,weight
+weight;;poids de l'enfant (kg),weight
+weight;;poids de l'enfant (kilogrammes),weight
+weight;;weight (kg),weight
+weight;;weight in kg,weight
+weight1;;,weight
+weight1;;weight (kg),weight
+weight1;;weight in kgs,weight
+weightkg;;,weight
