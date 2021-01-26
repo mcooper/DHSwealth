@@ -2,32 +2,26 @@ library(tidyverse)
 library(pcaMethods)
 library(countrycode)
 
-data <- read.csv('~/mortalityblob/dhs/wealthvars_clean.csv')
+data <- read.csv('~/mortalityblob/dhs/mics_dhs_wealth.csv')
+
+data$nas <- rowSums(is.na(data))
 
 data <- data %>%
-  filter(!is.na(urban)) %>%
-  filter(!surveycode %in% c('JO-2-1', 'NG-2-1', 'PY-2-1'))
-
-pca_vars <- c("water_source_drinking", "has_electricity", "has_radio", "has_television",
-              "has_refrigerator", "has_bicycle", "has_motorcycle", "has_car", "has_telephone",
-              "toilet_type", "material_wall", "material_floor", "material_roof",
-              "number_sleeping_rooms")
+  filter(nas <= 5)
 
 options(na.action='na.pass')
 
-sel <- data[ , pca_vars]
-
-sel$number_sleeping_rooms <- sel$number_sleeping_rooms/max(sel$number_sleeping_rooms, na.rm=T)
+data$number_sleeping_rooms <- data$number_sleeping_rooms/max(data$number_sleeping_rooms, na.rm=T)
 
 #Get Wealth Factor from All Vars
-mm <- model.matrix( ~ water_source_drinking + has_electricity + has_radio + has_television + has_refrigerator + has_bicycle + has_motorcycle + has_car + has_telephone + toilet_type + material_wall + material_floor + material_roof + number_sleeping_rooms, data=sel)
+mm <- model.matrix( ~ water_source_drinking + has_electricity + has_radio + has_television + has_refrigerator + has_bicycle + has_motorcycle + has_car + toilet_type + material_wall + material_floor + material_roof + number_sleeping_rooms, data=data)
 
 pca <- pca(mm, method = 'svdImpute', center=TRUE, nPcs = 1, verbose=TRUE)
 
 data$wfh <- scores(pca)[ , 1]
 
-#Get Wealth Factor from All Vars
-mm <- model.matrix( ~ water_source_drinking + has_electricity + has_radio + has_television + has_refrigerator + has_bicycle + has_motorcycle + has_car + has_telephone + toilet_type + number_sleeping_rooms, data=sel)
+#Get Wealth Factor from Vars robust to urban-rural differences
+mm <- model.matrix( ~ water_source_drinking + has_electricity + has_radio + has_television + has_refrigerator + has_bicycle + has_motorcycle + has_car + has_telephone + toilet_type + number_sleeping_rooms, data=data)
 
 pca <- pca(mm, method = 'svdImpute', center=TRUE, nPcs = 1, verbose=TRUE)
 
