@@ -73,6 +73,8 @@ data$urban_rural <- NULL
 data$urban_rural_chr <- NULL
 
 #Dates
+data$date_cmc <- data$survey_month
+data$date_cmc[which(data$date_cmc < 900)] <- data$date_cmc[which(data$date_cmc < 900)] + 1200
 data$date_cmc[which(data$date_cmc > 1500)] <- data$date_cmc[which(data$date_cmc > 1500)] - 681
 
 data$survey_year <- 1900 + floor((data$date_cmc - 1)/12)
@@ -82,20 +84,12 @@ data$survey_month <- data$date_cmc - 12 * (data$survey_year - 1900)
 # Save Data
 ##############################
 
-geo <- data %>% 
-	filter(!is.na(latitude)) %>%
-	select(code, latitude, longitude, survey_year) %>% 
-	unique
-
-#Write Geospatial Data
-write.csv(geo, '~/mortalityblob/dhs/wealthvars_geo.csv', row.names=F)
-
 final <- data %>%
   select(code, householdno, wealth_quintile, wealth_factor, survey_month, 
          water_source_nondrinking, water_source_drinking, has_electricity, has_radio,
          has_television, has_refrigerator, has_bicycle, has_motorcycle, has_car, has_telephone,
          toilet_type, material_wall, material_floor, material_roof, number_sleeping_rooms,
-         surveycode, latitude, longitude, urban, survey_year, site_weight=hhweight, country)
+         surveycode, urban, survey_year, hhweight, country)
 
 write.csv(final, '~/mortalityblob/dhs/wealthvars_clean.csv', row.names=F)
 

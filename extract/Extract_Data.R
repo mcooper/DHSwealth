@@ -12,7 +12,7 @@ WRITE_DIR <- '~/mortalityblob/dhs/'
 METADATA_DIR <- '~/DHSwealth/metadata/'
 
 #Temporary directory for intermediate outputs
-TEMP_DIR <- '/mnt/DHS/'
+TEMP_DIR <- '~/mortalityblob/TMP/'
 
 #Previously scoped surveys
 scope <- read.csv(paste0(METADATA_DIR, 'Wealth_Scope.csv')) %>%
