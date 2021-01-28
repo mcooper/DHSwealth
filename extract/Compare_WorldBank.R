@@ -104,9 +104,9 @@ wtd.quantile<- function (x, weights = NULL, probs = c(0, 0.25, 0.5, 0.75, 1),
 
 combq <- comb %>%
   group_by(survey) %>%
-  mutate(wfh_q = wfh < quantile(wfh, probs=mean(phc, na.rm=T)/100),
-         wfh_q2 = wfh2 < quantile(wfh2, probs=mean(phc, na.rm=T)/100),
-         wfh_q3 = wfh3 < quantile(wfh3, probs=mean(phc, na.rm=T)/100))
+  mutate(wfh_q = wfh <= quantile(wfh, probs=mean(phc, na.rm=T)/100),
+         wfh_q2 = wfh2 <= quantile(wfh2, probs=mean(phc, na.rm=T)/100),
+         wfh_q3 = wfh3 <= quantile(wfh3, probs=mean(phc, na.rm=T)/100))
 
 comb2 <- combq %>%
   select(iso3, year, urban_rural, hhweight, country, survey, program, wfh, wfh2, wfh3,

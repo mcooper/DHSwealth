@@ -3,7 +3,7 @@ library(countrycode)
 library(sf)
 library(rnaturalearth)
 
-d <- read.csv('~/mortalityblob/dhs/wealth_export_chi.csv', stringsAsFactors=F)
+d <- data.table::fread('~/mortalityblob/dhs/wealth_export_chi.csv', stringsAsFactors=F)
 
 
 threshs <- d %>%
@@ -18,11 +18,11 @@ threshsg <- threshs %>%
             cutoff2 = weighted.mean(cutoff2[!is.infinite(cutoff2)], w=n[!is.infinite(cutoff2)]),
             cutoff3 = weighted.mean(cutoff3[!is.infinite(cutoff3)], w=n[!is.infinite(cutoff3)]))
 
-d$phc3 <- d$wfh3 < threshsg$cutoff3
+d$phc2 <- d$wfh2 < threshsg$cutoff2
 
 d2 <- d %>%
   group_by(iso3, survey, urban_rural) %>%
-  summarize(phc = weighted.mean(wfh_q3, na.rm=T, w=hhweight) * n()) %>%
+  summarize(phc = weighted.mean(wfh_q2, na.rm=T, w=hhweight) * n()) %>%
   spread(urban_rural, phc) %>%
   mutate(perc.poor.rural = Rural/(Urban + Rural)) %>%
   ungroup %>%
@@ -44,8 +44,8 @@ ggsave('~/DHSwealth/res/perc.poor.rural_nat.png', width=8, height=4)
 
 d3 <- d %>%
   group_by(iso3, survey, urban_rural) %>%
-  summarize(phc3 = weighted.mean(phc3, na.rm=T, w=hhweight) * n()) %>%
-  spread(urban_rural, phc3) %>%
+  summarize(phc2 = weighted.mean(phc2, na.rm=T, w=hhweight) * n()) %>%
+  spread(urban_rural, phc2) %>%
   mutate(perc.poor.rural = Rural/(Urban + Rural)) %>% 
   ungroup %>%
   group_by(iso3) %>%
@@ -65,11 +65,11 @@ ggsave('~/DHSwealth/res/perc.poor.rural_int.png', width=8, height=4)
 ex <- d %>% 
   filter(survey == 'India 2015 DHS')
 
-xdf <- data.frame(vals=c(threshs$cutoff3[threshs$survey == 'India 2015 DHS'], threshsg$cutoff3),
+xdf <- data.frame(vals=c(threshs$cutoff2[threshs$survey == 'India 2015 DHS'], threshsg$cutoff2),
                   def=c('National', 'Harmonized'))
 
 ggplot() + 
-  geom_histogram(data = ex, aes(x=wfh3, y=..density.., weight=hhweight, fill=urban_rural)) +
+  geom_histogram(data = ex, aes(x=wfh2, y=..density.., weight=hhweight, fill=urban_rural)) +
   geom_vline(data = xdf, aes(xintercept = vals, linetype=def)) + 
   labs(x='Wealth Scale (Possessions)', fill='', linetype='Poverty Mark',
        title='Distribution of Wealth in India 2015 DHS, with Poverty Threshholds')
@@ -81,16 +81,16 @@ ex <- d %>%
   filter(survey %in% c('Jamaica 2011 MICS', 'Chad 2015 DHS', 'Belarus 2012 MICS'))
 
 
-xdf1 <- data.frame(vals=c(threshs$cutoff3[threshs$survey == 'Jamaica 2011 MICS'],
-                         threshsg$cutoff3),
+xdf1 <- data.frame(vals=c(threshs$cutoff2[threshs$survey == 'Jamaica 2011 MICS'],
+                         threshsg$cutoff2),
                   def=c('National', 'Harmonized'),
                   survey = rep('Jamaica 2011 MICS', 2))
-xdf2 <- data.frame(vals=c(threshs$cutoff3[threshs$survey == 'Chad 2015 DHS'],
-                         threshsg$cutoff3),
+xdf2 <- data.frame(vals=c(threshs$cutoff2[threshs$survey == 'Chad 2015 DHS'],
+                         threshsg$cutoff2),
                   def=c('National', 'Harmonized'),
                   survey = rep('Chad 2015 DHS', 2))
 xdf3 <- data.frame(vals=c(min(d$wfh3[d$survey == 'Belarus 2012 MICS']),
-                         threshsg$cutoff3),
+                         threshsg$cutoff2),
                   def=c('National', 'Harmonized'),
                   survey = rep('Belarus 2012 MICS', 2))
 

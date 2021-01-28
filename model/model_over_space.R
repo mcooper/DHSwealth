@@ -1,8 +1,10 @@
 library(tidyverse)
 library(zoo)
+library(countrycode)
 library(cowplot)
+library(data.table)
 
-d <- read.csv('~/mortalityblob/dhs/wealth_export_chi.csv', stringsAsFactors=F)
+d <- fread('~/mortalityblob/dhs/wealth_export_chi.csv', stringsAsFactors=F)
 
 fill <- function(x, upto=5){
   #Interpolate any two values
@@ -42,12 +44,12 @@ threshsg <- threshs %>%
             cutoff2 = weighted.mean(cutoff2[!is.infinite(cutoff2)], w=n[!is.infinite(cutoff2)]),
             cutoff3 = weighted.mean(cutoff3[!is.infinite(cutoff3)], w=n[!is.infinite(cutoff3)]))
 
-d$phc3 <- d$wfh3 < threshsg$cutoff3
+d$phc2 <- d$wfh2 < threshsg$cutoff2
 
 cty_yr <- d %>%
   group_by(survey, urban_rural, year, iso3, country, program) %>%
-  summarize(phc3 = weighted.mean(phc3, weights=hhweight)) %>%
-  spread(urban_rural, phc3) %>%
+  summarize(phc2 = weighted.mean(phc2, weights=hhweight)) %>%
+  spread(urban_rural, phc2) %>%
   mutate(perc.rural.poor = Rural/(Rural + Urban)) %>%
   filter(!is.nan(perc.rural.poor), !is.na(perc.rural.poor))
 
@@ -95,6 +97,5 @@ p2 <- ggplot(all) +
 
 plot_grid(p1, p2, ncol=2)
 ggsave('~/DHSwealth/res/Compare_other_vars.png', width=8, height=4)
-
 
 mod <- lm(perc.rural.poor ~ ag_gdp + urb, data=all)

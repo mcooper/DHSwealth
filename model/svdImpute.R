@@ -1,8 +1,9 @@
 library(tidyverse)
 library(pcaMethods)
 library(countrycode)
+library(data.table)
 
-data <- read.csv('~/mortalityblob/dhs/mics_dhs_wealth.csv')
+data <- fread('~/mortalityblob/dhs/mics_dhs_wealth.csv')
 
 data$nas <- rowSums(is.na(data))
 
@@ -14,7 +15,7 @@ data <- data %>%
          toilet_type = toupper(toilet_type),
          material_wall = toupper(material_wall),
          material_floor = toupper(material_floor),
-         material_roof = toupper(material_roof),
+         material_roof = toupper(material_roof))
 
 options(na.action='na.pass')
 
@@ -43,7 +44,7 @@ pca3 <- pca(mm, method = 'svdImpute', center=TRUE, nPcs = 1, verbose=TRUE)
 data$wfh3 <- scores(pca3)[ , 1]
 data$wfh3 <- -data$wfh3
 
-#write.csv(data, '~/mortalityblob/dhs/wealth_export.csv', row.names=F)
+write.csv(data, '~/mortalityblob/dhs/wealth_export.csv', row.names=F)
 
 d <- data %>%
   filter(!is.na(wealth_factor)) %>%
@@ -60,9 +61,27 @@ d %>% arrange(cor) %>% filter(cor < 0)
 
 ggplot(d) + 
   geom_bar(aes(x=cor, fill=pca), stat='bin', position='dodge', binwidth=0.05) + 
-  labs(x="Correlation", title = "Correlation between survey-specific wealth index and harmonized wealth index", caption='Worst Surveys: Ukraine 2005 MICS, Albania 2000 MICS, Cuba 2019 MICS, Tunisia 2018 MICS, Turkey 2008 DHS', y='Count of Surveys')
+  labs(x="Correlation", title = "Correlation between survey-specific wealth index and harmonized wealth index", caption='Worst Surveys: Ukraine 2005 MICS, Albania 2000 MICS, Cuba 2019 MICS, Tunisia 2018 MICS, Turkey 2008 DHS', y='Count of Surveys') + 
+  theme(legend.position=c(0.25, 0.75))
 ggsave('~/DHSwealth/res/correlation_histogram_all.png', width=8, height=4)
 
+
+s <- data %>%
+  select(urban_rural, wfh, wfh2, wfh3) %>%
+  gather(pca, value, -urban_rural) %>%
+  mutate(pca = case_when(grepl('2', pca) ~ "Possessions, sanitation",
+                         grepl('3', pca) ~ "Possessions",
+                         TRUE ~ "Possessions, sanitation, household materials"))
+
+ggplot(s) + 
+  geom_histogram(aes(x=value, fill=urban_rural)) + 
+  facet_wrap(pca ~ ., ncol =1) + 
+  scale_x_continuous(limits=c(-1.5, 1.5))+
+  theme(axis.title.y=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank())
+
+ggsave('~/DHSwealth/res/urban_rural_histograms.png', width=8, height=4)
 
 loads <- bind_rows(pca3 %>%
                     loadings %>%
@@ -86,6 +105,7 @@ ggplot(loads) +
   geom_bar(aes(x=variable, y=PC1), stat='identity') + 
   coord_flip() + 
   facet_wrap(pca ~ ., ncol=3)
+ggsave('~/DHSwealth/res/PCA_loadings.png', width=10, height=5)
 
 
 
